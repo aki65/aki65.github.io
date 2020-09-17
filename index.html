@@ -1,1 +1,51 @@
-Hello World
+<h1 align="center">BadukAI</h1>
+
+<span style='text-align:center;display:block;'>
+	<img src='icon.png'>
+</span>
+
+<p>&nbsp;</p>
+
+<p>This app allows you to play and analyse go/baduk/weiqi with two very strong AIs:
+
+<p>1) <b>Katago</b>: To my knowledge the first native implementation on android. It uses the 20 blocks network from version 1.5.0 and runs on the GPU via OpenCL, so your device needs OpenCL capability (which most have nowadays). On Snapdragon 855+ processor it does about 10 nodes per second (on top OpenCL-performers like the latest Exynos 990 it should be twice as fast). 
+
+<p>Please note: On first start after app installation Katago will be initialising for several minutes since it has to do OpenCL-Tuning, so please be patient. Subsequents starts will be much faster.
+
+<p>2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained against 40b self-play) and a 40 blocks network (LZ 273). The implementation is optimized for android and can use the DSP on recent Snapdragon chipsets so will be quite fast on such devices. On Snapdragon 855+ for example it does about <b>200 n/s</b> (for 15 blocks) and <b>50 n/s</b> (for 40 blocks).
+
+<p> For installation <a href="baduk_ai__arm64-v8a-rel-0.1.apk">download APK</a> and install it (you have to allow installation of thirdparty-apps in settings), then <a href="kg.bin.gz">download Katago weight-file</a> (too large for APK) and copy it to the top directory of your internal storage.
+	
+<p>&nbsp;</p>
+
+<span style='text-align:center;display:block;'>
+	<img width="300" src='Screenshot_20200917-190229.jpg'>
+	<img width="300" src='Screenshot_20200917-190311.jpg'>
+</span>
+
+<p>&nbsp;</p>
+
+<p>The UI is an extension of Alexander Taylor's excellent app "LazyBaduk" (with kind permission from him). Most of it is self-explanatory but some hints may be helpful:
+
+<p>The two bullets in the top-left corner indicate whose turn it is. You can switch this by tapping on the bullets. 
+
+<p>After tapping the dashed rectangle in the top row you can define a rectangle on the board by dragging from its top left corner to the bottom right one. Afterwards the first move of the AI analysis will be restricted to this rectangle. You can cancel this by tapping the red cross in the top row. This feature is only supported by LeelaZero.
+
+If you touch the board, a preview of the stone to by played will be shown. You can adjust its position by dragging your finger across the board (stone position is always 3 lines above your finger). Lifting off your finger finally places the stone. The 3-line-offset can be switched off in the settings.
+
+<p>The area below the board shows a kind of winrate histogram. The area is divided into as many segments as moves have been loaded (from sgf) and/or played. By tapping on a segment you can navigate to the corresponding move, resp. position. The current position is indicated by a red triangle. If a position has been analysed by AI the (originally grey) corresponding segment is coloured black/white such that the size of the white area is proportional to white's winrate.
+
+<p>The histogram always shows a linear sequence of moves (there is just no space for a complete win-rated game tree). If you load an sgf (either by the button or by sharing an sgf from another app to BadukAI), the main line of the sgf will be shown. If you then enter moves manually or let the AI generate moves to explore a position, the histogram will show the sequence from game start to the last "manual" move. To return to your "branching position" and display the main line of the sgf again, tap "back to main".
+
+<p>Even though the histogram shows only one move sequence, the button "save sgf" will save the complete game tree (your "manual" moves become variations).
+
+<p>When AI analyses a position, the best moves (up to six) appear below the winrate histogram in order of quality. While you hold your finger on such a move, the primary variation following that move is displayed on the board.
+
+<p>By tapping "ponder" you can make AI analyse the current position: The winrate in the histogram and the display of the best moves on the board and below the histogram will be continously updated until you stop analysis by tapping "ponder" again. 
+
+<p>If you tap "analyse all", AI will analyse each position from the current one to the end of the sequence in the histogram (spending the "secs/move" from the settings on each position). Afterwards the histogram will show all winrates so that you can detect sudden changes in the winrate (which hint at mistakes) and have a closer look at these positions.
+
+<p>To play handicap you can play black stone, pass, black stone, pass,... until all handicap stones are placed, then tap "play W" to let AI play white.
+
+<p> If you encounter problems, let me know ...
+<p><a href="mailto:a.kirmse@gmx.de">Andreas Kirmse</a>
