@@ -9,13 +9,12 @@
 
 <p>This app allows you to play and analyse go/baduk/weiqi with two very strong AIs:
 
-<p>1) <b>Katago</b>: To my knowledge the first native implementation on android. It uses the 20 blocks network from version 1.5.0 and runs on the GPU via OpenCL, so your device needs OpenCL capability (which most have nowadays). On Snapdragon 855+ processor it does about 10 nodes per second (on top OpenCL-performers like the latest Exynos 990 it should be twice as fast). 
-
-<p>Please note: On first start after app installation Katago will be initialising for several minutes since it has to do OpenCL-Tuning, so please be patient. Subsequents starts will be much faster.
+<p>1) <b>Katago</b>: To my knowledge the first native implementation on android.
+ You can choose between a 10 blocks network (the latest one from extended training) and a 20 blocks network (from version 1.5.0). It runs on the CPU. On Snapdragon 855+ processor for example it does about 80 n/s (for 10 blocks) and 9 n/s (for 20 blocks).
 
 <p>2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained against 40b self-play) and a 40 blocks network (LZ 273). The implementation is optimized for android and can use the DSP on recent Snapdragon chipsets so will be quite fast on such devices. On Snapdragon 855+ for example it does about <b>200 n/s</b> (for 15 blocks) and <b>50 n/s</b> (for 40 blocks) which is six times faster than the previously available cpu-based versions.
 
-<p> For installation <a href="https://github.com/aki65/aki65.github.io/releases/download/v0.2.0/baduk_ai__arm64-v8a-rel-0.2.apk">download APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings)
+<p> For installation <a href="https://github.com/aki65/aki65.github.io/releases/download/v0.3.0/baduk_ai__arm64-v8a-rel-0.3.apk">download APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings)
 	
 <p>&nbsp;</p>
 
