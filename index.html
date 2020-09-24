@@ -10,7 +10,7 @@
 <p>This app allows you to play and analyse go/baduk/weiqi with two very strong AIs:
 
 <p>1) <b>Katago</b>: To my knowledge the first native implementation on android.
- You can choose between a 10 blocks network (the latest one from extended training) and a 20 blocks network (from version 1.5.0). It runs on the CPU. On Snapdragon 855+ processor for example it does about 80 n/s (for 10 blocks) and 9 n/s (for 20 blocks).
+ You can choose between a 10 blocks network (the latest one from extended training) and a 20 blocks network (from version 1.5.0). Moreover you can load a network from your device storage. KataGo runs on the CPU. On Snapdragon 855+ processor for example it does about 80 n/s (for 10 blocks) and 9 n/s (for 20 blocks).
 
 <p>2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained against 40b self-play) and a 40 blocks network (LZ 273). The implementation is optimized for android and can use the DSP on recent Snapdragon chipsets so will be quite fast on such devices. On Snapdragon 855+ for example it does about <b>200 n/s</b> (for 15 blocks) and <b>50 n/s</b> (for 40 blocks) which is six times faster than the previously available cpu-based versions.
 
@@ -31,7 +31,9 @@
 
 <p>After tapping the dashed rectangle in the top row you can define a rectangle on the board by dragging from its top left corner to the bottom right one. Afterwards the first move of the AI analysis will be restricted to this rectangle. You can cancel this by tapping the red cross in the top row. This feature is only supported by LeelaZero.
 
-If you touch the board, a preview of the stone to by played will be shown. You can adjust its position by dragging your finger across the board (stone position is always 3 lines above your finger). Lifting off your finger finally places the stone. The 3-line-offset can be switched off in the settings.
+<p>The settings menu in the top right corner allows you to switch networks, engines and adjust game settings. If KataGo is in use, it shows the name of the network currently used in the first field. If you tap on this field, a file dialog opens which allows you to choose a KataGo network file from your device storage. To avoid duplication, the file is not copied into the app, but read from the chosen location on subsequent starts, so please don't delete it while still in use. This feature is only available with KataGo since the LeelaZero implementation uses optimized models which require pre-processing, so you can't just load a standard LeelaZero network.
+
+<p>If you touch the board, a preview of the stone to by played will be shown. You can adjust its position by dragging your finger across the board (stone position is always 3 lines above your finger). Lifting off your finger finally places the stone. The 3-line-offset can be switched off in the settings.
 
 <p>The area below the board shows a kind of winrate histogram. The area is divided into as many segments as moves have been loaded (from sgf) and/or played. By tapping on a segment you can navigate to the corresponding move, resp. position. The current position is indicated by a red triangle. If a position has been analysed by AI the (originally grey) corresponding segment is coloured black/white such that the size of the white area is proportional to white's winrate.
 
