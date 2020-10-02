@@ -14,7 +14,7 @@
 
 <p>2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained against 40b self-play) and a 40 blocks network (LZ 273). The implementation is optimized for android and can use the DSP on recent Snapdragon chipsets so will be quite fast on such devices. On Snapdragon 855+ for example it does about <b>200 n/s</b> (for 15 blocks) and <b>50 n/s</b> (for 40 blocks) which is six times faster than the previously available cpu-based versions.
 
-<p> For installation <a href="https://github.com/aki65/aki65.github.io/releases/download/v0.6.0/baduk_ai__arm64-v8a-rel-0.6.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v0.6.0/baduk_ai__armeabi-v7a-rel-0.6.apk">download 32 bit APK</a> and install it.
+<p> For installation <a href="https://github.com/aki65/aki65.github.io/releases/download/v0.7.0/baduk_ai__arm64-v8a-rel-0.7.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v0.7.0/baduk_ai__armeabi-v7a-rel-0.7.apk">download 32 bit APK</a> and install it.
 	
 <p>&nbsp;</p>
 
@@ -33,9 +33,13 @@
 
 <p>The settings menu in the top right corner allows you to switch networks, engines and adjust game settings:
 
-<p> If KataGo is in use, it shows the name of the network currently used in the first field. If you tap on this field, a dialog opens which allows you to manage the networks: You can delete internal networks which you don't intend to use (to save storage) or you can choose a KataGo network file from your device storage. To avoid duplication, the file is not copied into the app, but read from the chosen location on subsequent starts, so please don't delete it while still in use. This feature is only available with KataGo since the LeelaZero implementation uses optimized models which require pre-processing, so you can't just load a standard LeelaZero network.
+<p> If KataGo is in use, it shows the name of the network currently used in the second field. If you tap on this field, a dialog opens which allows you to manage the networks: You can delete internal networks which you don't intend to use (to save storage) or you can choose a KataGo network file from your device storage. To avoid duplication, the file is not copied into the app, but read from the chosen location on subsequent starts, so please don't delete it while still in use. This feature is only available with KataGo since the LeelaZero implementation uses optimized models which require pre-processing, so you can't just load a standard LeelaZero network.
 
-<p> If KataGo is active, you can edit the field "kyu-rank" in settings: If you enter a number between 30 and -8 (denoting 9-dan), a calibrated bot of this strength (as in KaTrain) will make the AI moves (full credit to sanderland's great KaTrain project for the underlying algorithms). If you enter anything else in "kyu-rank", full KataGo will be in charge of the AI moves again. Analysis (via "ponder" or "analyse all") will always be done by full KataGo.
+<p> If KataGo is active, you can edit the field "kyu-rank" in settings: If you enter a number between 30 and -8 (denoting 9-dan), a calibrated bot of roughly this strength (as in KaTrain) will make the AI moves (full credit to sanderland's great KaTrain project for the underlying algorithms). For the strength calibration to fit, you have to use the 20b network (or an external 15b network). Rank settings above 4-dan have to be taken with a grain of salt: Strength will increase but not by much, so that -8 will be a lot weaker than 9-dan.
+	
+<p> If you enter anything else than numbers between 30 and -8 in "kyu-rank" (or nothing at all), full KataGo will be in charge of the AI moves again. Analysis (via "ponder" or "analyse all") will always be done by full KataGo.
+
+<p> With the checkbox "winrate on play" you can toggle whether winrates are also shown during play (not only in analysis). If ticked, the winrate will be displayed for all moves of the full AI (the calibrated bot mentioned above does not calculate winrates for his moves, so nothing is shown when he plays).	
 
 <p>If you touch the board, a preview of the stone to by played will be shown. You can adjust its position by dragging your finger across the board (stone position is always 3 lines above your finger). Lifting off your finger finally places the stone. The 3-line-offset can be switched off in the settings.
 
