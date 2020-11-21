@@ -10,11 +10,11 @@
 <p>This app allows you to play and analyse go/baduk/weiqi with two very strong AIs:
 
 <p>1) <b>Katago</b>: To my knowledge the first native implementation on android.
- You can choose between a 10 blocks network (the latest one from extended training) and a 20 blocks network (from version 1.5.0). Moreover you can load a network from your device storage. KataGo runs on the CPU. On Snapdragon 855+ processor for example it does about 80 n/s (for 10 blocks) and 9 n/s (for 20 blocks).
+ You can choose between a 10 blocks network (the latest one from extended training) and a 20 blocks network (from version 1.5.0). Moreover you can load a network from your device storage. The 10 blocks network runs on CPU. The 20 blocks network in the 64 bit version is optimized for android and will use HW acceleration if possible. On Snapdragon 855+ processor for example KataGo does about 80 n/s (for 10 blocks) and 55 n/s (for 20 blocks).
 
 <p>2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained against 40b self-play) and a 40 blocks network (LZ 273). The implementation is optimized for android and can use the DSP on recent Snapdragon chipsets so will be quite fast on such devices. On Snapdragon 855+ for example it does about <b>200 n/s</b> (for 15 blocks) and <b>50 n/s</b> (for 40 blocks) which is six times faster than the previously available cpu-based versions.
 
-<p> For installation <a href="https://github.com/aki65/aki65.github.io/releases/download/v0.17.0/baduk_ai__arm64-v8a-rel-0.17.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v0.17.0/baduk_ai__armeabi-v7a-rel-0.17.apk">download 32 bit APK</a> and install it.
+<p> For installation <a href="https://github.com/aki65/aki65.github.io/releases/download/v0.18.0/baduk_ai__arm64-v8a-rel-0.18.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v0.18.0/baduk_ai__armeabi-v7a-rel-0.18.apk">download 32 bit APK</a> and install it.
 	
 <p>&nbsp;</p>
 
@@ -42,6 +42,8 @@
 <p> With the checkbox "winrate on play" you can toggle whether winrates are also shown during play (not only in analysis). If ticked, the winrate will be displayed for all moves of the full AI (the calibrated bot mentioned above does not calculate winrates for his moves, so nothing is shown when he plays).	
 
 <p>If you touch the board, a preview of the stone to by played will be shown. You can adjust its position by dragging your finger across the board (stone position is always 3 lines above your finger). Lifting off your finger finally places the stone. The 3-line-offset can be switched off in the settings.
+
+<p> If you place the new stone on an existing stone, normally nothing will happen. But if you have loaded an sgf with only set stones (i.e no moves), then the existing stone will be removed (which is useful for editing a position to analyze).
 
 <p>The area below the board shows a kind of winrate histogram. The area is divided into as many segments as moves have been loaded (from sgf) and/or played. By tapping on a segment you can navigate to the corresponding move, resp. position. The current position is indicated by a red triangle. If a position has been analysed by AI the (originally grey) corresponding segment is coloured black/white such that the size of the white area is proportional to white's winrate.
 
