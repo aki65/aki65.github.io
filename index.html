@@ -1,4 +1,5 @@
 <body style="background-color:#fbf3ea;">
+<h5 align="right"><a href="index_zh.html">&#x4e2d&#x6587&#x7248</a></h5>
 <h1 align="center">BadukAI</h1>
 
 <span style='text-align:center;display:block;'>
@@ -14,7 +15,7 @@
 
 <p>2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained against 40b self-play) and a 40 blocks network (LZ 286). The implementation is optimized for android and can use HW acceleration on recent Snapdragon chipsets so will be quite fast on such devices. On Snapdragon 855+ for example it does about <b>200 n/s</b> (for 15 blocks) and <b>50 n/s</b> (for 40 blocks) which is six times faster than the previously available cpu-based versions.
 
-<p> For installation <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.7.0/baduk_ai__arm64-v8a-rel-1.7.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.7.0/baduk_ai__armeabi-v7a-rel-1.7.apk">download 32 bit APK</a> and install it.
+<p> You can either install it from <a href="https://play.google.com/store/apps/details?id=net.kir.baduk_ai">google play store</a> or you can <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.8.0/baduk_ai__arm64-v8a-rel-1.8.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.8.0/baduk_ai__armeabi-v7a-rel-1.8.apk">download 32 bit APK</a> and install it.
 	
 <p>&nbsp;</p>
 
@@ -51,7 +52,17 @@
 
 <p> With the checkbox "winrate on play" you can toggle whether winrates are also shown during play (not only in analysis). If ticked, the winrate will be displayed for all moves of the full AI (the calibrated bot mentioned above does not calculate winrates for his moves, so nothing is shown when he plays).
 
-<p> If you enter a positive number in "visits/move in analysis", then this number of visits will be executed on each move during analysis. Otherwise the time specified in "seconds/move" will be spent.
+<p> In the field labelled "histogram:" you can configure what the histogram below the board will show:
+	<ul>
+		<li>winrate</li>
+		<li>difference between white's winrates in this position and the previous position,
+			  capped at the value (in percent) that you enter in the text field following &#x00b1,
+			i.e. if you enter 10 the histogram will range from -10% (bottom) to +10% (top)</li>
+		<li>difference between white's score leads in this position and the previous position,
+			capped at the value that you enter in the text field following &#x00b1</li>
+	</ul>
+
+<p> If you enter a positive number in the field "visits/move in analysis", then this number of visits will be executed on each move during analysis. Otherwise the time specified in "seconds/move" will be spent.
 
 <h3 id="board">Board</h3>	
 <p>If you touch the board, a preview of the stone to by played will be shown. You can adjust its position by dragging your finger across the board (stone position is always 3 lines above your finger). Lifting off your finger finally places the stone. The 3-line-offset can be switched off in the settings.
