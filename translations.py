@@ -21,7 +21,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 'winrate on play'     : {
                   'ko' : "\ud50c\ub808\uc774 \uc911 \uc2b9\ub960" ,
                   'ja' : "\u30d7\u30ec\u30a4\u4e2d\u306e\u52dd\u7387" ,
-                  'zh' : "\u5bf9\u5f08\u65f6\u8d62\u7387" },
+                  'zh' : "\u5bf9\u5f08\u65f6\u80dc\u7387" },
                 'black/white board'     : {
                   'ko' : "\ube14\ub799\u002f\ud654\uc774\ud2b8 \ubcf4\ub4dc" ,
                   'ja' : "\u9ed2\u002f\u767d \u30dc\u30fc\u30c9" ,
@@ -93,7 +93,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 'winrate for w: '     : {
                   'ko' : "\ud770\uc0c9 \uc2b9\ub960: " ,
                   'ja' : "\u767d\u306e\u52dd\u7387: " ,
-                  'zh' : "\u767d\u68cb\u8d62\u7387: " },
+                  'zh' : "\u767d\u68cb\u80dc\u7387: " },
                 'score-lead for w: '     : {
                   'ko' : "\ud770\uc0c9 \uc810\uc218 \ub9ac\ub4dc: " ,
                   'ja' : "\u767d\u306e\u30b9\u30b3\u30a2\u30ea\u30fc\u30c9: " ,
@@ -335,11 +335,11 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 "\u0394-winrate"  : {
                   'ko' : "\uc2b9\ub960 \ucc28\uc774",
                   'ja' : "\u52dd\u7387\u306e\u5dee",
-                  'zh' : "\u8d62\u7387\u5dee\u5f02"},
+                  'zh' : "\u80dc\u7387\u5dee\u5f02"},
                 "winrate"  : {
                   'ko' : "\uc2b9\ub960",
                   'ja' : "\u52dd\u7387",
-                  'zh' : "\u8d62\u7387"    },
+                  'zh' : "\u80dc\u7387"    },
                 "\u0394-score"  : {
                   'ko' : "\ub9ac\ub4dc \ucc28\uc774",
                   'ja' : "\u925b\u306e\u5dee",
