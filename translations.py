@@ -90,14 +90,14 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\ud1b5\uacfc" ,
                   'ja' : "\u901a\u904e" ,
                   'zh' : "\u865a\u624b" },
-                'winrate for w: '     : {
+                'W winrate: '     : {
                   'ko' : "\ud770\uc0c9 \uc2b9\ub960: " ,
                   'ja' : "\u767d\u306e\u52dd\u7387: " ,
                   'zh' : "\u767d\u68cb\u80dc\u7387: " },
-                'score-lead for w: '     : {
-                  'ko' : "\ud770\uc0c9 \uc810\uc218 \ub9ac\ub4dc: " ,
-                  'ja' : "\u767d\u306e\u30b9\u30b3\u30a2\u30ea\u30fc\u30c9: " ,
-                  'zh' : "\u767d\u68cb\u9886\u5148\u76ee: " },
+                'score-lead: '     : {
+                  'ko' : "\uc810\uc218 \ub9ac\ub4dc: " ,
+                  'ja' : "\u30b9\u30b3\u30a2\u5dee: " ,
+                  'zh' : "\u68cb\u9886\u5148\u76ee: " },
                 'is'     : {
                   'ko' : "" ,
                   'ja' : "" ,
@@ -330,8 +330,8 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'zh' : "\u76f4\u65b9\u56fe"},
                 "upto \u00b1"  : {
                   'ko' : "\ucd5c\ub300 \u00b1",
-                  'ja' : "\u4e0a\u9650\u306f\u00b1",
-                  'zh' : "\u4e0a\u9650\u4e3a\u00b1"},
+                  'ja' : "\u307e\u3067 \u00b1",
+                  'zh' : "\u6700\u591a \u00b1"},
                 "\u0394-winrate"  : {
                   'ko' : "\uc2b9\ub960 \ucc28\uc774",
                   'ja' : "\u52dd\u7387\u306e\u5dee",
@@ -343,5 +343,65 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 "\u0394-score"  : {
                   'ko' : "\ub9ac\ub4dc \ucc28\uc774",
                   'ja' : "\u925b\u306e\u5dee",
-                  'zh' : "\u9886\u5148\u5dee\u5f02"},                
+                  'zh' : "\u9886\u5148\u5dee\u5f02"},
+                "sound"  : {
+                  'ko' : "\uc18c\ub9ac",
+                  'ja' : "\u97f3",
+                  'zh' : "\u58f0\u97f3"},
+                "Time settings for you"  : {
+                  'ko' : "\ub2f9\uc2e0\uc744 \uc704\ud55c \uc2dc\uac04 \ub9e4\uac1c\ubcc0\uc218",
+                  'ja' : "\u3042\u306a\u305f\u306e\u305f\u3081\u306e\u6642\u9593\u8a2d\u5b9a",
+                  'zh' : "\u60a8\u7684\u65f6\u95f4\u53c2\u6570"},
+                "main time in minutes"  : {
+                  'ko' : "\ud45c\uc900\uc2dc\u0028\ubd84\u0029",
+                  'ja' : "\u5206\u5358\u4f4d\u306e\u30e1\u30a4\u30f3\u6642\u9593",
+                  'zh' : "\u4e3b\u8981\u65f6\u95f4\uff08\u5206\u949f\uff09"},
+                "number of byoyomis"  : {
+                  'ko' : "\ucd08\uc77d\uae30\uc758 \uc218",
+                  'ja' : "\u79d2\u8aad\u307f\u306e\u6570",
+                  'zh' : "\u8bfb\u79d2\u7684\u6570\u91cf"},
+                "seconds per byoyomi"  : {
+                  'ko' : "\ucd08\uc77d\uae30\ub2f9 \ucd08",
+                  'ja' : "\u79d2\u8aad\u307f\u306e\u79d2",
+                  'zh' : "\u6bcf\u4e2a\u8bfb\u79d2\u7684\u79d2\u6570"},
+                "stones per byoyomi"  : {
+                  'ko' : "\ucd08\uc77d\uae30\ub2f9 \ub3cc",
+                  'ja' : "\u79d2\u8aad\u307f\u306e\u77f3\u306e\u6570",
+                  'zh' : "\u6bcf\u4e2a\u8bfb\u79d2\u7684\u77f3\u5934\u6570"},
+                "Turn on clock"  : {
+                  'ko' : "\uc2dc\uacc4\ub97c \ucf1c\ub2e4",
+                  'ja' : "\u6642\u8a08\u3092\u30aa\u30f3\u306b\u3057\u307e\u3059",
+                  'zh' : "\u6253\u5f00\u65f6\u949f"},                
+                "Turn off clock"  : {
+                  'ko' : "\uc2dc\uacc4\ub97c \ub044\ub2e4",
+                  'ja' : "\u6642\u8a08\u3092\u5207\u308b",
+                  'zh' : "\u5173\u95ed\u65f6\u949f"},
+                "Save settings"  : {
+                  'ko' : "\uc124\uc815 \uc800\uc7a5",
+                  'ja' : "\u8a2d\u5b9a\u3092\u4fdd\u5b58\u3059\u308b",
+                  'zh' : "\u4fdd\u5b58\u8bbe\u7f6e"},
+                "Time settings for AI"  : {
+                  'ko' : "\uc778\uacf5 \uc9c0\ub2a5\uc744 \uc704\ud55c \uc2dc\uac04 \uc124\uc815",
+                  'ja' : "\u4eba\u5de5\u77e5\u80fd\u306e\u6642\u9593\u8a2d\u5b9a",
+                  'zh' : "\u4eba\u5de5\u667a\u80fd\u7684\u65f6\u95f4\u8bbe\u7f6e"},
+                "Manage time settings"  : {
+                  'ko' : "\uc2dc\uac04 \uc124\uc815 \uad00\ub9ac",
+                  'ja' : "\u6642\u9593\u8a2d\u5b9a\u3092\u7ba1\u7406\u3059\u308b",
+                  'zh' : "\u7ba1\u7406\u65f6\u95f4\u8bbe\u7f6e"},
+                "You lost on time"  : {
+                  'ko' : "\ub2f9\uc2e0\uc740 \uc2dc\uac04 \ub54c\ubb38\uc5d0 \uc84c\ub2e4",
+                  'ja' : "\u3042\u306a\u305f\u306f\u6642\u9593\u306e\u305f\u3081\u306b\u8ca0\u3051\u307e\u3057\u305f",
+                  'zh' : "\u4f60\u56e0\u4e3a\u65f6\u95f4\u800c\u5931\u53bb"},
+                "Placing a stone" : {
+                  'ko' : "\ub3cc \ub193\uae30",
+                  'ja' : "\u77f3\u3092\u7f6e\u304f",
+                  'zh' : "\u653e\u7f6e\u4e00\u5757\u77f3\u5934"},
+                "Got it" : {
+                  'ko' : "\uc54c\uc558\uc5b4\uc694",
+                  'ja' : "\u4e86\u89e3\u3057\u305f",
+                  'zh' : "\u77e5\u9053\u4e86"},
+                "1) Put your finger on the board, \n     then a new stone will appear\n     near to your finger.\n2) Drag your finger over the\n     board to move the stone\n     to the desired location.\n3) Lift your finger off the\n     board to place the stone." : {
+                  'ko' : "\u0031\u0029 \ud310\uc5d0 \uc190\uac00\ub77d\uc744 \ub300\uba74\n     \uc190\uac00\ub77d \uadfc\ucc98\uc5d0 \uc0c8\ub85c\uc6b4\n     \ub3cc\uc774 \ub098\ud0c0\ub0a9\ub2c8\ub2e4\u002e\n\u0032\u0029 \uc2a4\ud1a4\uc744 \uc6d0\ud558\ub294 \uc704\uce58\ub85c\n     \uc774\ub3d9\ud558\uae30 \uc704\ud574 \ubcf4\ub4dc \uc704\ub85c\n     \uc190\uac00\ub77d\uc744 \ub4dc\ub798\uadf8\ud569\ub2c8\ub2e4\u002e\n\u0033\u0029 \ub3cc\uc744 \ub193\uae30 \uc704\ud574 \ubcf4\ub4dc\uc5d0\uc11c\n     \uc190\uac00\ub77d\uc744 \ub5cd\ub2c8\ub2e4\u002e",
+                  'ja' : "\u0031\uff09\u30dc\u30fc\u30c9\u306b\u6307\u3092\u7f6e\u304f\n     \u3068\u3001\u6307\u306e\u8fd1\u304f\u306b\u65b0\n     \u3057\u3044\u77f3\u304c\u73fe\u308c\u307e\u3059\u3002\n\u0032\uff09\u6307\u3092\u30dc\u30fc\u30c9\u4e0a\u306b\u30c9\u30e9\n     \u30c3\u30b0\u3057\u3066\u3001\u77f3\u3092\u76ee\u7684\n     \u306e\u5834\u6240\u306b\u79fb\u52d5\u3057\u307e\u3059\u3002\n\u0033\uff09\u77f3\u3092\u7f6e\u304f\u305f\u3081\u306b\u3001\u30dc\u30fc\n     \u30c9\u304b\u3089\u6307\u3092\u96e2\u3057\u307e\u3059\u3002",
+                  'zh' : "\u0031\u0029 \u5c06\u4f60\u7684\u624b\u6307\u653e\u5728\u68cb\u76d8\n     \u4e0a\uff0c\u7136\u540e\u4f60\u7684\u624b\u6307\u9644\n     \u8fd1\u4f1a\u51fa\u73b0\u4e00\u4e2a\u65b0\u7684\u77f3\u5934\u3002 \n\u0032\u0029 \u5728\u68cb\u76d8\u4e0a\u62d6\u52a8\u624b\n     \u6307\uff0c\u5c06\u77f3\u5934\u79fb\u52a8\n     \u5230\u6240\u9700\u4f4d\u7f6e\u3002\n\u0033\u0029 \u5c06\u624b\u6307\u4ece\u677f\u4e0a\u62ac\n     \u8d77\u4ee5\u653e\u7f6e\u77f3\u5934\u3002"}  
 }
