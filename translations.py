@@ -97,7 +97,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 'score-lead: '     : {
                   'ko' : "\uc810\uc218 \ub9ac\ub4dc: " ,
                   'ja' : "\u30b9\u30b3\u30a2\u5dee: " ,
-                  'zh' : "\u76ee\u5dee\u003a " },
+                  'zh' : "\u76ee\u5dee: " },
                 'is'     : {
                   'ko' : "" ,
                   'ja' : "" ,
@@ -279,10 +279,10 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\ub9c8\uc9c0\ub9c9 \uac8c\uc784\ub85c\ub4dc" ,
                   'ja' : "\u6700\u5f8c\u306e\u30b2\u30fc\u30e0\u3092\u30ed\u30fc\u30c9" ,
                   'zh' : "\u52a0\u8f7d\u4e0a\u4e00\u5c40" },
-                'Load from storage'     : {
-                  'ko' : "\uc800\uc7a5\uc18c\uc5d0\uc11c\ub85c\ub4dc" ,
-                  'ja' : "\u30b9\u30c8\u30ec\u30fc\u30b8\u304b\u3089\u30ed\u30fc\u30c9" ,
-                  'zh' : "\u4ece\u5b58\u50a8\u52a0\u8f7d" },
+                'Load sgf from storage'     : {
+                  'ko' : "\uc800\uc7a5\uc18c\uc5d0\uc11csgf\ub85c\ub4dc" ,
+                  'ja' : "\u30b9\u30c8\u30ec\u30fc\u30b8\u304b\u3089sgf\u30ed\u30fc\u30c9" ,
+                  'zh' : "\u4ece\u5b58\u50a8\u52a0\u8f7dsgf" },
                 'Load'     : {
                   'ko' : "\uc5f4\ub2e4" ,
                   'ja' : "\u8ca0\u8377" ,
@@ -297,7 +297,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'zh' : "\u5220\u9664" },
                 'Load network from storage'     : {
                   'ko' : "\uc2a4\ud1a0\ub9ac\uc9c0\uc5d0\uc11c \ub124\ud2b8\uc6cc\ud06c\ub85c\ub4dc" ,
-                  'ja' : "\u30b9\u30c8\u30ec\u30fc\u30b8\u304b\u3089\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u3092\u30ed\u30fc\u30c9\u3059\u308b" ,
+                  'ja' : "\u30b9\u30c8\u30ec\u30fc\u30b8\u304b\u3089\u30cd\u30c3\u30c8\u30ef\u30fc\u30af\u3092\u30ed\u30fc\u30c9" ,
                   'zh' : "\u4ece\u5b58\u50a8\u52a0\u8f7d\u7f51\u7edc" },
                 'own'     : {
                   'ko' : "\uc18c\uc720" ,
@@ -335,7 +335,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 "\u0394-winrate"  : {
                   'ko' : "\uc2b9\ub960 \ucc28\uc774",
                   'ja' : "\u52dd\u7387\u306e\u5dee",
-                  'zh' : "\u80dc\u7387\u589e\u51cf""},
+                  'zh' : "\u80dc\u7387\u589e\u51cf"},
                 "winrate"  : {
                   'ko' : "\uc2b9\ub960",
                   'ja' : "\u52dd\u7387",
@@ -391,7 +391,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 "You lost on time"  : {
                   'ko' : "\ub2f9\uc2e0\uc740 \uc2dc\uac04 \ub54c\ubb38\uc5d0 \uc84c\ub2e4",
                   'ja' : "\u3042\u306a\u305f\u306f\u6642\u9593\u306e\u305f\u3081\u306b\u8ca0\u3051\u307e\u3057\u305f",
-                  'zh' : "\u60a8\u8d85\u65f6\u8d1f "},
+                  'zh' : "\u60a8\u8d85\u65f6\u8d1f"},
                 "Placing a stone" : {
                   'ko' : "\ub3cc \ub193\uae30",
                   'ja' : "\u77f3\u3092\u7f6e\u304f",
@@ -400,6 +400,74 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\uc54c\uc558\uc5b4\uc694",
                   'ja' : "\u4e86\u89e3\u3057\u305f",
                   'zh' : "\u77e5\u9053\u4e86"},
+                "Save to same file" : {
+                  'ko' : "\uac19\uc740 \ud30c\uc77c\uc5d0 \uc800\uc7a5",
+                  'ja' : "\u540c\u3058\u30d5\u30a1\u30a4\u30eb\u306b\u4fdd\u5b58",
+                  'zh' : "\u4fdd\u5b58\u5230\u540c\u4e00\u4e2a\u6587\u4ef6"},                
+                "Save to existing file" : {
+                  'ko' : "\uae30\uc874 \ud30c\uc77c\uc5d0 \uc800\uc7a5",
+                  'ja' : "\u65e2\u5b58\u306e\u30d5\u30a1\u30a4\u30eb\u306b\u4fdd\u5b58",
+                  'zh' : "\u4fdd\u5b58\u5230\u73b0\u6709\u6587\u4ef6"},
+                "Choose file" : {
+                  'ko' : "\ud30c\uc77c \uc120\ud0dd",
+                  'ja' : "\u30d5\u30a1\u30a4\u30eb\u3092\u9078\u3076",
+                  'zh' : "\u9009\u62e9\u6587\u4ef6"},
+                "Save to new file" : {
+                  'ko' : "\uc0c8 \ud30c\uc77c\uc5d0 \uc800\uc7a5",
+                  'ja' : "\u65b0\u3057\u3044\u30d5\u30a1\u30a4\u30eb\u306b\u4fdd\u5b58",
+                  'zh' : "\u4fdd\u5b58\u5230\u65b0\u6587\u4ef6"},
+                "Filename:" : {
+                  'ko' : "\ud30c\uc77c \uc774\ub984:",
+                  'ja' : "\u30d5\u30a1\u30a4\u30eb\u540d:",
+                  'zh' : "\u6587\u6863\u540d\u79f0:"},
+                "Choose directory" : {
+                  'ko' : "\ub514\ub809\ud1a0\ub9ac \uc120\ud0dd",
+                  'ja' : "\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u3092\u9078\u629e",
+                  'zh' : "\u9009\u62e9\u76ee\u5f55"},
+                "Choose image" : {
+                  'ko' : "\uc774\ubbf8\uc9c0 \uc120\ud0dd",
+                  'ja' : "\u753b\u50cf\u3092\u9078\u629e",
+                  'zh' : "\u9009\u62e9\u56fe\u7247"},
+                "Take photo" : {
+                  'ko' : "\uc0ac\uc9c4\uc744 \ucd2c\uc601",
+                  'ja' : "\u5199\u771f\u3092\u64ae\u308b",
+                  'zh' : "\u62cd\u7167\u7247"},                
+                "Choose" : {
+                  'ko' : "\uc120\ud0dd\ud558\ub2e4",
+                  'ja' : "\u9078\u629e\u3059\u308b",
+                  'zh' : "\u9009\u62e9"},
+                "Load empty board" : {
+                  'ko' : "\ube48 \ubcf4\ub4dc \ub85c\ub4dc",
+                  'ja' : "\u7a7a\u306e\u30dc\u30fc\u30c9\u3092\u30ed\u30fc\u30c9\u3059\u308b",
+                  'zh' : "\u88c5\u5165\u7a7a\u677f"},
+                "add W\nstone" : {
+                  'ko' : "  \ud770\uc0c9\n\ub3cc \ucd94\uac00",
+                  'ja' : " \u767d\u77f3\n\u306e\u8ffd\u52a0",
+                  'zh' : "\u6dfb\u52a0\n\u767d\u77f3"},
+                "add B\nstone" : {
+                  'ko' : "\uac80\uc740\uc0c9\n\ub3cc \ucd94\uac00",
+                  'ja' : " \u9ed2\u77f3\n\u306e\u8ffd\u52a0",
+                  'zh' : "\u6dfb\u52a0\n\u9ed1\u77f3"},
+                "remove\n stone" : {
+                  'ko' : " \ub3cc\n\uc81c\uac70",
+                  'ja' : "\u77f3\u306e\n\u9664\u53bb",
+                  'zh' : "\u79fb\u9664\n\u77f3\u5934"},
+                "Captures:" : {
+                  'ko' : "\ud3ec\ucc29:",
+                  'ja' : "\u6355\u7372:",
+                  'zh' : "\u6355\u83b7:"},                
+                "Image is being processed.\nPlease wait ..." : {
+                  'ko' : "\uc774\ubbf8\uc9c0\ub97c \ucc98\ub9ac\ud558\ub294 \uc911\uc785\ub2c8\ub2e4\u002e\n\uc7a0\uc2dc \uae30\ub2e4\ub824 \uc8fc\uc2ed\uc2dc\uc624\u002e\u002e\u002e",
+                  'ja' : "\u753b\u50cf\u3092\u51e6\u7406\u4e2d\u3067\u3059\u3002\n\u304a\u5f85\u3061\u304f\u3060\u3055\u3044 \u002e\u002e\u002e",
+                  'zh' : "\u6b63\u5728\u5904\u7406\u56fe\u50cf\u3002\n\u8bf7\u7a0d\u5019\u002e\u002e\u002e"},
+                "SGF is being loaded.\nPlease wait ..." : {
+                  'ko' : "\u0053\u0047\u0046\ub97c \ub85c\ub4dc\ud558\ub294 \uc911\uc785\ub2c8\ub2e4\u002e\n\uc7a0\uc2dc \uae30\ub2e4\ub824 \uc8fc\uc2ed\uc2dc\uc624\u002e\u002e\u002e",
+                  'ja' : "\u0053\u0047\u0046\u304c\u30ed\u30fc\u30c9\u3055\u308c\u3066\u3044\u307e\u3059\u3002\n\u304a\u5f85\u3061\u304f\u3060\u3055\u3044\u002e\u002e\u002e",
+                  'zh' : "\u6b63\u5728\u52a0\u8f7d \u0053\u0047\u0046\u3002\n\u8bf7\u7a0d\u5019\u002e\u002e\u002e"},
+                "Detect board and stones from image" : {
+                  'ko' : "\uc774\ubbf8\uc9c0\uc5d0\uc11c \uccb4\uc2a4\ud310\uacfc \ub3cc \uac10\uc9c0",
+                  'ja' : "\u753b\u50cf\u304b\u3089\u30dc\u30fc\u30c9\u3084\u77f3\u3092\u691c\u51fa\u3059\u308b",
+                  'zh' : "\u8ba4\u8bc6\u56fe\u4e2d\u7684\u68cb\u76d8\u548c\u77f3\u5934"},                
                 "1) Put your finger on the board, \n     then a new stone will appear\n     near to your finger.\n2) Drag your finger over the\n     board to move the stone\n     to the desired location.\n3) Lift your finger off the\n     board to place the stone." : {
                   'ko' : "\u0031\u0029 \ud310\uc5d0 \uc190\uac00\ub77d\uc744 \ub300\uba74\n     \uc190\uac00\ub77d \uadfc\ucc98\uc5d0 \uc0c8\ub85c\uc6b4\n     \ub3cc\uc774 \ub098\ud0c0\ub0a9\ub2c8\ub2e4\u002e\n\u0032\u0029 \uc2a4\ud1a4\uc744 \uc6d0\ud558\ub294 \uc704\uce58\ub85c\n     \uc774\ub3d9\ud558\uae30 \uc704\ud574 \ubcf4\ub4dc \uc704\ub85c\n     \uc190\uac00\ub77d\uc744 \ub4dc\ub798\uadf8\ud569\ub2c8\ub2e4\u002e\n\u0033\u0029 \ub3cc\uc744 \ub193\uae30 \uc704\ud574 \ubcf4\ub4dc\uc5d0\uc11c\n     \uc190\uac00\ub77d\uc744 \ub5cd\ub2c8\ub2e4\u002e",
                   'ja' : "\u0031\uff09\u30dc\u30fc\u30c9\u306b\u6307\u3092\u7f6e\u304f\n     \u3068\u3001\u6307\u306e\u8fd1\u304f\u306b\u65b0\n     \u3057\u3044\u77f3\u304c\u73fe\u308c\u307e\u3059\u3002\n\u0032\uff09\u6307\u3092\u30dc\u30fc\u30c9\u4e0a\u306b\u30c9\u30e9\n     \u30c3\u30b0\u3057\u3066\u3001\u77f3\u3092\u76ee\u7684\n     \u306e\u5834\u6240\u306b\u79fb\u52d5\u3057\u307e\u3059\u3002\n\u0033\uff09\u77f3\u3092\u7f6e\u304f\u305f\u3081\u306b\u3001\u30dc\u30fc\n     \u30c9\u304b\u3089\u6307\u3092\u96e2\u3057\u307e\u3059\u3002",

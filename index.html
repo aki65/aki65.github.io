@@ -15,13 +15,12 @@
 
 <p>2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained against 40b self-play) and a 40 blocks network (LZ 287). Moreover you can load a network from your device storage. The implementation is optimized for android and can use HW acceleration on recent Snapdragon chipsets so will be quite fast on such devices. On Snapdragon 888 for example it does about <b>320 n/s</b> (for 15 blocks) and <b>140 n/s</b> (for 40 blocks) which is about 15 times faster than the previously available cpu-based versions.
 
-<p> You can either install it from <a href="https://play.google.com/store/apps/details?id=net.kir.baduk_ai">google play store</a> or you can <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.11.0/baduk_ai__arm64-v8a-rel-1.11.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.11.0/baduk_ai__armeabi-v7a-rel-1.11.apk">download 32 bit APK</a> and install it.
+<p> You can either install it from <a href="https://play.google.com/store/apps/details?id=net.kir.baduk_ai">google play store</a> or you can <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.12.0/baduk_ai__arm64-v8a-rel-1.12.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.12.0/baduk_ai__armeabi-v7a-rel-1.12.apk">download 32 bit APK</a> and install it.
 	
 <p>&nbsp;</p>
 
 <span style='text-align:center;display:block;'>
 	<img width="300" src='Screenshot_20200917-190229.jpg'>
-	<img width="300" src='Screenshot_20200917-190311.jpg'>
 </span>
 
 <p>&nbsp;</p>
@@ -37,14 +36,14 @@
 </ul>
 
 <h3 id="top_row">Top row</h3>
-<p>The two bullets in the top-left corner indicate whose turn it is. You can switch this by tapping on the bullets. 
+<p>The two bullets in the top-left corner indicate whose turn it is. You can switch this by tapping on the bullets (if no moves have been played yet). 
 
 <p>By tapping the dashed rectangle in the top row you can restrict AI analysis to a region (which consists of a rectangle plus additional points): First a dialog pops up where you can enter the coordinates of the additional points and choose how many subsequent moves must be inside the region. Afterwards you can define the rectangle on the board by dragging from its top left corner to the bottom right one. You can cancel this analysis restriction by tapping the red cross in the top row.
 
 <h3 id="settings">Settings</h3>	
 <p>The settings menu in the top right corner allows you to switch networks, engines and adjust game settings:
 
-<p> The name of the network currently used is displayed in the first field (LeelaZero) resp. second field (KataGo). If you tap on this field, a dialog opens which allows you to manage the networks: You can delete internal networks which you don't intend to use (to save storage) or you can choose a network file from your device storage. To avoid duplication, the file is not copied into the app, but read from the chosen location on subsequent starts, so please don't delete it while still in use. For KataGo you can load either standard or optimized networks in this way, for LeelaZero only optimized networks.
+<p> The name of the network currently used is displayed in the first field (LeelaZero) resp. second field (KataGo). If you tap on this field, a dialog opens which allows you to manage the networks: You can delete internal networks which you don't intend to use (to save storage) or you can load network files from your device storage. For KataGo you can load either standard or optimized networks in this way, for LeelaZero only optimized networks. If you want to load an optimized network (which always consists of two files), you must choose both files, one after the other (necessary because otherwise the latest android versions won't grant access to both files for BadukAI). You can find optimized networks <a href="https://github.com/aki65/aki65.github.io/releases">here</a>.
 
 <p id ="kyu-rank"> If KataGo is active, you can edit the field "kyu-rank" in settings: If you enter a number between 30 and -8 (denoting 9-dan), a calibrated bot of roughly this strength (as in KaTrain) will make the AI moves (full credit to sanderland's great KaTrain project for the underlying algorithms). For the strength calibration to fit, you have to use the 20b network (or an external 15b network). Rank settings above 4-dan have to be taken with a grain of salt: Strength will increase but not by much, so that -8 will be a lot weaker than 9-dan. You might want to combine this bot with activating "opening book" to get a human-style fuseki.
 	
@@ -62,12 +61,10 @@
 			capped at the value that you enter in the text field following &#x00b1</li>
 	</ul>
 
-<p> If you enter a positive number in the field "visits/move in analysis", then this number of visits will be executed on each move during analysis. Otherwise the time specified in "seconds/move" will be spent.
+<p> By tapping "Manage time settings" you can set constraints on thinking time for yourself and AI: "seconds/move" will be used by AI during play. If you enter a positive number in the field "visits/move in analysis", then this number of visits will be executed on each move during analysis. Otherwise the time specified in "seconds/move" will be spent.
 
 <h3 id="board">Board</h3>	
 <p>If you touch the board, a preview of the stone to by played will be shown. You can adjust its position by dragging your finger across the board (stone position is always 3 lines above your finger). Lifting off your finger finally places the stone. The 3-line-offset can be switched off in the settings.
-
-<p> If you place the new stone on an existing stone, normally nothing will happen. But if you have loaded an sgf with only set stones (i.e no moves), then the existing stone will be removed (which is useful for editing a position to analyze).
 
 <p>The area below the board shows a kind of winrate histogram. The area is divided into as many segments as moves have been loaded (from sgf) and/or played. By tapping on a segment you can navigate to the corresponding move, resp. position. The current position is indicated by a red triangle. If a position has been analysed by AI the (originally grey) corresponding segment is coloured black/white such that the size of the white area is proportional to white's winrate.
 
@@ -82,7 +79,11 @@
 
 <p>If you tap "analyse all", AI will analyse each position from the current one to the end of the sequence in the histogram (spending "seconds/move" or "visits/move in analysis" from the settings on each position). Afterwards the histogram will show all winrates so that you can detect sudden changes in the winrate (which hint at mistakes) and have a closer look at these positions.
 
-<p>To play handicap you can play black stone, pass, black stone, pass,... until all handicap stones are placed, then tap "play W" to let AI play white.
+<p> If you have loaded an sgf with only set stones (i.e no moves), the navigation buttons in the second row are useless, so they mutate into editing buttons: After tapping "add B stone" you can put any number of black stones on the board (in the same way as you would play them). Same goes for white stones. After tapping "remove stone" you can place a cross on the board (in the same way as a stone). By placing it on an existing stone, you can remove that stone.
+
+<p> By tapping the marked editing button again (whichever it is), you can stop it's editing function. In that state, touching the board will play a stone as usual.
+	
+<p> To play handicap, just put the handicap stones on the board (as described above), tap on the white bullet in the top left corner to make it white's turn, then tap "play W" to let AI play white.
 
 <h3 id="strength">How to adjust AI's strength for playing against it</h3>
 
