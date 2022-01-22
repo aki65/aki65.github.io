@@ -15,7 +15,7 @@
 
 <p>2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained against 40b self-play) and a 40 blocks network (LZ 287). Moreover you can load a network from your device storage. The implementation is optimized for android and can use HW acceleration on recent Snapdragon chipsets so will be quite fast on such devices. On Snapdragon 888 for example it does about <b>320 n/s</b> (for 15 blocks) and <b>140 n/s</b> (for 40 blocks) which is about 15 times faster than the previously available cpu-based versions.
 
-<p> You can either install it from <a href="https://play.google.com/store/apps/details?id=net.kir.baduk_ai">google play store</a> or you can <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.12.0/baduk_ai__arm64-v8a-rel-1.12.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.12.0/baduk_ai__armeabi-v7a-rel-1.12.apk">download 32 bit APK</a> and install it.
+<p> You can either install it from <a href="https://play.google.com/store/apps/details?id=net.kir.baduk_ai">google play store</a> or you can <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.13.0/baduk_ai__arm64-v8a-rel-1.13.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.13.0/baduk_ai__armeabi-v7a-rel-1.13.apk">download 32 bit APK</a> and install it.
 	
 <p>&nbsp;</p>
 
@@ -61,6 +61,8 @@
 			capped at the value that you enter in the text field following &#x00b1</li>
 	</ul>
 
+<p> The combobox "one color" allows you to switch to a fun variation of the game called "One color go": All stones played appear in the same color (the one that you choose in the combobox). This a fun way to train your (shape) memory. The setting applies only to newly played stones, not to existing ones. So, if you play a one-colored game and want to see the current position with both colors, you have to set the "one color" option to "-", then jump to the beginning of the game (by tapping on the first segment of the histogram), then jump back to the end (by tapping on the last segment of the histogram). In this way you force BadukAI to re-play all the stones, so that the new setting applies, so that the stones will have normal colors again.	
+
 <p> By tapping "Manage time settings" you can set constraints on thinking time for yourself and AI: "seconds/move" will be used by AI during play. If you enter a positive number in the field "visits/move in analysis", then this number of visits will be executed on each move during analysis. Otherwise the time specified in "seconds/move" will be spent.
 
 <h3 id="board">Board</h3>	
@@ -84,6 +86,34 @@
 <p> By tapping the marked editing button again (whichever it is), you can stop its editing function. In that state, touching the board will play a stone as usual.
 	
 <p> To play handicap, just put the handicap stones on the board (as described above), tap on the white bullet in the top left corner to make it white's turn, then tap "play W" to let AI play white.
+
+<p> After tapping "load sgf", you can not only load sgf files, but also images of a go board or a part of it. BadukAI will then detect the board and stones in the image and display the resulting board position. For that to work, you must tell BadukAI what to look for, more precisely:
+  <ul>
+	  <li>How many horizontal lines does the board fragment in the image contain ?</li>
+	  <li>How many vertical lines does the board fragment in the image contain ?</li>
+		<li>Is it a corner or a side ? More generally, which edges are contained in the image ?
+	</ul>
+For this tsumego, for example:
+<span style='text-align:center;display:block;'>	
+	<img width="300" src='corner.png'>
+</span>
+<p>you would have to set the following contents information:
+	<ul>
+		<li> 7 horizontal lines
+		<li> 9 vertical lines
+		<li> left and bottom edge
+	</ul>
+	And for a full board it's of course: 19 vertical lines, 19 horizontal lines, all edges.
+
+<p>You can do it in both orders:
+	<ul>
+		<li>First load the image (or take the photo): Then the dialog will re-appear afterwards with the image displayed on the right. Then edit the contents information, then tap "Detect stones in image above".
+	</ul>
+or
+	<ul>
+		<li>First edit the contents information, then check "Detect stones in new image right after ...", then load the image (or take the photo). Then BadukAI will analyze the image immediately without showing the dialog again.
+	</ul>
+The second way is faster, but only possible if you know the image contents in advance before seeing the image in the app (for example, if you will take a photo of a board in front of you).
 
 <h3 id="strength">How to adjust AI's strength for playing against it</h3>
 
