@@ -11,11 +11,25 @@
 <p>This app allows you to play and analyse go/baduk/weiqi with two very strong AIs:
 
 <p>1) <b>Katago</b>: To my knowledge the first native implementation on android.
- You can choose between a 10 blocks network (the latest one from extended training) and a 20 blocks network (from version 1.5.0). Moreover you can load a network from your device storage. The 10 blocks network runs on CPU. The 20 blocks network is optimized for android and will use HW acceleration if possible. On Snapdragon 888 processor for example KataGo does about 100 n/s (for 10 blocks) and <b>160 n/s</b> (for 20 blocks).
+ You can choose between a 10 blocks network (the latest one from extended training) and a 20 blocks network (from version 1.5.0). Moreover you can load a network from your device storage. The 10 blocks network runs on CPU. The 20 blocks network is optimized for android and will use HW acceleration if possible.
 
-<p>2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained against 40b self-play) and a 40 blocks network (LZ 287). Moreover you can load a network from your device storage. The implementation is optimized for android and can use HW acceleration on recent Snapdragon chipsets so will be quite fast on such devices. On Snapdragon 888 for example it does about <b>320 n/s</b> (for 15 blocks) and <b>140 n/s</b> (for 40 blocks) which is about 15 times faster than the previously available cpu-based versions.
+<p>2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained against 40b self-play) and a 40 blocks network (LZ 287). Moreover you can load a network from your device storage. The implementation is optimized for android and will use HW acceleration if possible.
 
-<p> You can either install it from <a href="https://play.google.com/store/apps/details?id=net.kir.baduk_ai">google play store</a> or you can <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.13.0/baduk_ai__arm64-v8a-rel-1.13.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.13.0/baduk_ai__armeabi-v7a-rel-1.13.apk">download 32 bit APK</a> and install it.
+<p>	Some examples of performance:
+<p>
+<table border="1">
+	<tr align='center'><th>Network</th><th>Snapdragon 888</th><th>Snapdragon 778</th><th>Dimensity 1100</th><th>Snapdragon 768</th>
+		  <th>Snapdragon 855+</th>
+	</tr>
+	<tr align='center'><td>KG 20b<td>260 n/s</td><td>120 n/s</td><td>105 n/s</td><td>80 n/s</td><td>55 n/s</td>
+	</tr>			
+  <tr align='center'><td>LZ 15b<td>1000 n/s</td><td></td><td></td><td></td><td>200 n/s</td>
+	</tr>
+	<tr align='center'><td>LZ 40b<td>280 n/s</td><td></td><td></td><td></td><td>50 n/s</td>
+	</tr>
+</table>
+
+<p>You can either install it from <a href="https://play.google.com/store/apps/details?id=net.kir.baduk_ai">google play store</a> or you can <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.14.0/baduk_ai__arm64-v8a-rel-1.14.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.14.0/baduk_ai__armeabi-v7a-rel-1.14.apk">download 32 bit APK</a> and install it.
 	
 <p>&nbsp;</p>
 

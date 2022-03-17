@@ -295,10 +295,14 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\ub9c8\uc9c0\ub9c9 \uac8c\uc784\ub85c\ub4dc" ,
                   'ja' : "\u524d\u4f5c\u306e\u30ed\u30fc\u30c9" ,
                   'zh' : "\u52a0\u8f7d\u4e0a\u4e00\u5c40" },
-                'Load last board position'  : {
-                  'ko' : "\ubcf4\ub4dc\uc758 \ub9c8\uc9c0\ub9c9 \uc704\uce58 \ub85c\ub4dc" ,
-                  'ja' : "\u6700\u5f8c\u306e\u57fa\u677f\u4f4d\u7f6e\u3092\u30ed\u30fc\u30c9" ,
+                'Load last position'  : {
+                  'ko' : "\ub9c8\uc9c0\ub9c9 \uc704\uce58 \ub85c\ub4dc" ,
+                  'ja' : "\u6700\u5f8c\u306e\u4f4d\u7f6e\u30ed\u30fc\u30c9" ,
                   'zh' : "\u52a0\u8f7d\u4e0a\u4e00\u76d8\u9762" },
+                'Load sgf from clipboard'  : {
+                  'ko' : "\ud074\ub9bd\ubcf4\ub4dc\uc11csgf\ub85c\ub4dc" ,
+                  'ja' : "\u30af\u30ea\u30c3\u30d7\u30dc\u30fcsgf\u30ed\u30fc\u30c9" ,
+                  'zh' : "\u4ece\u526a\u8d34\u677f\u52a0\u8f7dsgf" },
                 "Stepping through game tree.\nPlease wait ..."  : {
                   'ko' : "\uac8c\uc784 \ud2b8\ub9ac\ub97c \ud1b5\ud574 \uc2a4\ud14c\ud551.\n\uae30\ub2e4\ub9ac\uc138\uc694 ..." ,
                   'ja' : "\u30b2\u30fc\u30e0\u30c4\u30ea\u30fc\u3092\u8e0f\u307f\u3057\u3081\u308b.\n\u304a\u5f85\u3061\u304f\u3060\u3055\u3044 ..." ,
@@ -491,7 +495,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 "Detect stones in new\nimage right after (with\ncontents info below)" : {
                   'ko' : "\ubc14\ub85c \uc0c8 \uc774\ubbf8\uc9c0\uc5d0\uc11c\n\ub3cc\uc744 \uac80\uc0c9\ud569\ub2c8\ub2e4\n(\uc544\ub798 \ub0b4\uc6a9 \uc815\ubcf4 \uc0ac\uc6a9)",
                   'ja' : "\u65b0\u3057\u3044\u753b\u50cf\u3067\u76f4\u63a5\u77f3\n\u3092\u691c\u7d22\u3059\u308b(\u4e0b\u304b\u3089\u306e\n\u753b\u50cf\u30b3\u30f3\u30c6\u30f3\u30c4\u4ed8\u304d)",
-                  'zh' : "\u7ed3\u5408\u4e0b\u8ff0\u4fe1\u606f\n\u7acb\u5373\u8bc6\u522b\u65b0\u56fe\u7247\u4e2d\u7684\u68cb\u5b50"},                
+                  'zh' : "\u7ed3\u5408\u4e0b\u8ff0\u4fe1\u606f\n\u7acb\u5373\u8bc6\u522b\u65b0\u56fe\n\u7247\u4e2d\u7684\u68cb\u5b50"},                
                 "What is contained\nin the image ?" : {
                   'ko' : "\uc774\ubbf8\uc9c0\uc5d0 \ud3ec\ud568\ub41c \ub0b4\uc6a9\uc740\n\ubb34\uc5c7\uc785\ub2c8\uae4c\u003f",
                   'ja' : "\u753b\u50cf\u306b\u306f\u4f55\u304c\u542b\u307e\u308c\u3066\n\u3044\u307e\u3059\u304b\uff1f",
