@@ -1,156 +1,391 @@
-<body style="background-color:#fbf3ea;">
-<h5 align="right"><a href="index_zh.html">&#x4e2d&#x6587&#x7248</a></h5>
-<h1 align="center">BadukAI</h1>
+<body style="background-color: #fbf3ea">
+  <h5 align="right"><a href="index_zh.html">中文版</a></h5>
+  <h1 align="center">BadukAI</h1>
 
-<span style='text-align:center;display:block;'>
-	<img src='icon.png'>
-</span>
+  <span style="text-align: center; display: block">
+    <img src="icon.png" />
+  </span>
 
-<p>&nbsp;</p>
+  <p>&nbsp;</p>
 
-<p>This app allows you to play and analyse go/baduk/weiqi with two very strong AIs:
+  <p>
+    This app allows you to play and analyse go/baduk/weiqi with two very strong
+    AIs:
+  </p>
 
-<p>1) <b>Katago</b>: To my knowledge the first native implementation on android.
- You can choose between a 10 blocks network (the latest one from extended training) and a 20 blocks network (from version 1.5.0). Moreover you can load a network from your device storage. The 10 blocks network runs on CPU. The 20 blocks network is optimized for android and will use HW acceleration if possible.
+  <p>
+    1) <b>Katago</b>: To my knowledge the first native implementation on
+    android. You can choose between a 10 blocks network (the latest one from
+    extended training) and a 20 blocks network (from version 1.5.0). Moreover
+    you can load a network from your device storage. The 10 blocks network runs
+    on CPU. The 20 blocks network is optimized for android and will use HW
+    acceleration if possible.
+  </p>
 
-<p>2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained against 40b self-play) and a 40 blocks network (LZ 287). Moreover you can load a network from your device storage. The implementation is optimized for android and will use HW acceleration if possible.
+  <p>
+    2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained
+    against 40b self-play) and a 40 blocks network (LZ 287). Moreover you can
+    load a network from your device storage. The implementation is optimized for
+    android and will use HW acceleration if possible.
+  </p>
 
-<p>	Some examples of performance:
-<p>
-<table border="1">
-	<tr align='center'><th>Network</th><th>Snapdragon 888</th><th>Snapdragon 778</th><th>Dimensity 1100</th><th>Snapdragon 768</th>
-		  <th>Snapdragon 855+</th>
-	</tr>
-	<tr align='center'><td>KG 20b<td>260 n/s</td><td>120 n/s</td><td>120 n/s</td><td>80 n/s</td><td>55 n/s</td>
-	</tr>			
-  <tr align='center'><td>LZ 15b<td>1000 n/s</td><td></td><td></td><td></td><td>200 n/s</td>
-	</tr>
-	<tr align='center'><td>LZ 40b<td>280 n/s</td><td></td><td></td><td></td><td>50 n/s</td>
-	</tr>
-</table>
+  <p>Some examples of performance:</p>
+  <p></p>
+  <table border="1">
+    <tr align="center">
+      <th>Network</th>
+      <th>Snapdragon 888</th>
+      <th>Dimensity 1100</th>
+      <th>Snapdragon 778</th>
+      <th>Snapdragon 768</th>
+      <th>Snapdragon 855+</th>
+    </tr>
+    <tr align="center">
+      <td>KG 20b</td>
+      <td>260 n/s</td>
+      <td>140 n/s</td>
+      <td>120 n/s</td>
+      <td>80 n/s</td>
+      <td>55 n/s</td>
+    </tr>
+    <tr align="center">
+      <td>LZ 15b</td>
+      <td>1000 n/s</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>200 n/s</td>
+    </tr>
+    <tr align="center">
+      <td>LZ 40b</td>
+      <td>280 n/s</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>50 n/s</td>
+    </tr>
+  </table>
 
-<p>You can either install it from <a href="https://play.google.com/store/apps/details?id=net.kir.baduk_ai">google play store</a> or you can <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.14.0/baduk_ai__arm64-v8a-rel-1.14.apk">download 64 bit APK</a> and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href="https://github.com/aki65/aki65.github.io/releases/download/v1.14.0/baduk_ai__armeabi-v7a-rel-1.14.apk">download 32 bit APK</a> and install it.
-	
-<p>&nbsp;</p>
+  <p>
+    You can either install it from
+    <a href="https://play.google.com/store/apps/details?id=net.kir.baduk_ai"
+      >google play store</a
+    >
+    or you can
+    <a
+      href="https://github.com/aki65/aki65.github.io/releases/download/v1.14.0/baduk_ai__arm64-v8a-rel-1.14.apk"
+      >download 64 bit APK</a
+    >
+    and install it (make sure that installation of thirdparty-apps is allowed in
+    settings). If this APK is not compatible with your device,
+    <a
+      href="https://github.com/aki65/aki65.github.io/releases/download/v1.14.0/baduk_ai__armeabi-v7a-rel-1.14.apk"
+      >download 32 bit APK</a
+    >
+    and install it.
+  </p>
 
-<span style='text-align:center;display:block;'>
-	<img width="300" src='Screenshot_20200917-190229.jpg'>
-</span>
+  <p>&nbsp;</p>
 
-<p>&nbsp;</p>
+  <span style="text-align: center; display: block">
+    <img width="300" src="Screenshot_20200917-190229.jpg" />
+  </span>
 
-<p>The UI is an extension of Alexander Taylor's excellent app "LazyBaduk" (with kind permission from him). Most of it is self-explanatory but some hints may be helpful:
+  <p>&nbsp;</p>
 
-<ul>
-  <li><a href="#top_row">Top row</a></li>
-  <li><a href="#settings">Settings</a></li>
-  <li><a href="#board">Board</a></li>
-  <li><a href="#control">Control buttons</a></li>
-  <li><a href="#strength">How to adjust AI's strength for playing against it</a></li>
-</ul>
+  <p>
+    The UI is an extension of Alexander Taylor's excellent app "LazyBaduk" (with
+    kind permission from him). Most of it is self-explanatory but some hints may
+    be helpful:
+  </p>
 
-<h3 id="top_row">Top row</h3>
-<p>The two bullets in the top-left corner indicate whose turn it is. You can switch this by tapping on the bullets (if no moves have been played yet). 
-
-<p>By tapping the dashed rectangle in the top row you can restrict AI analysis to a region (which consists of a rectangle plus additional points): First a dialog pops up where you can enter the coordinates of the additional points and choose how many subsequent moves must be inside the region. Afterwards you can define the rectangle on the board by dragging from its top left corner to the bottom right one. You can cancel this analysis restriction by tapping the red cross in the top row.
-
-<h3 id="settings">Settings</h3>	
-<p>The settings menu in the top right corner allows you to switch networks, engines and adjust game settings:
-
-<p> The name of the network currently used is displayed in the first field (LeelaZero) resp. second field (KataGo). If you tap on this field, a dialog opens which allows you to manage the networks: You can delete internal networks which you don't intend to use (to save storage) or you can load network files from your device storage. For KataGo you can load either standard or optimized networks in this way, for LeelaZero only optimized networks. If you want to load an optimized network (which always consists of two files), you must choose both files, one after the other (necessary because otherwise the latest android versions won't grant access to both files for BadukAI). You can find optimized networks <a href="https://github.com/aki65/aki65.github.io/releases">here</a>.
-
-<p id ="kyu-rank"> If KataGo is active, you can edit the field "kyu-rank" in settings: If you enter a number between 30 and -8 (denoting 9-dan), a calibrated bot of roughly this strength (as in KaTrain) will make the AI moves (full credit to sanderland's great KaTrain project for the underlying algorithms). For the strength calibration to fit, you have to use the 20b network (or an external 15b network). Rank settings above 4-dan have to be taken with a grain of salt: Strength will increase but not by much, so that -8 will be a lot weaker than 9-dan. You might want to combine this bot with activating "opening book" to get a human-style fuseki.
-	
-<p> If you enter anything else than numbers between 30 and -8 in "kyu-rank" (or nothing at all), full KataGo will be in charge of the AI moves again. Analysis (via "ponder" or "analyse all") will always be done by full KataGo.
-
-<p> With the checkbox "winrate on play" you can toggle whether winrates are also shown during play (not only in analysis). If ticked, the winrate will be displayed for all moves of the full AI (the calibrated bot mentioned above does not calculate winrates for his moves, so nothing is shown when he plays).
-
-<p> In the field labelled "histogram:" you can configure what the histogram below the board will show:
-	<ul>
-		<li>winrate</li>
-		<li>difference between white's winrates in this position and the previous position,
-			  capped at the value (in percent) that you enter in the text field following &#x00b1,
-			i.e. if you enter 10 the histogram will range from -10% (bottom) to +10% (top)</li>
-		<li>difference between white's score leads in this position and the previous position,
-			capped at the value that you enter in the text field following &#x00b1</li>
-	</ul>
-
-<p> The combobox "one color" allows you to switch to a fun variation of the game called "One color go": All stones played appear in the same color (the one that you choose in the combobox). This a fun way to train your (shape) memory. The setting applies only to newly played stones, not to existing ones. So, if you play a one-colored game and want to see the current position with both colors, you have to set the "one color" option to "-", then jump to the beginning of the game (by tapping on the first segment of the histogram), then jump back to the end (by tapping on the last segment of the histogram). In this way you force BadukAI to re-play all the stones, so that the new setting applies, so that the stones will have normal colors again.	
-
-<p> By tapping "Manage time settings" you can set constraints on thinking time for yourself and AI: "seconds/move" will be used by AI during play. If you enter a positive number in the field "visits/move in analysis", then this number of visits will be executed on each move during analysis. Otherwise the time specified in "seconds/move" will be spent.
-
-<h3 id="board">Board</h3>	
-<p>If you touch the board, a preview of the stone to by played will be shown. You can adjust its position by dragging your finger across the board (stone position is always 3 lines above your finger). Lifting off your finger finally places the stone. The 3-line-offset can be switched off in the settings.
-
-<p>The area below the board shows a kind of winrate histogram. The area is divided into as many segments as moves have been loaded (from sgf) and/or played. By tapping on a segment you can navigate to the corresponding move, resp. position. The current position is indicated by a red triangle. If a position has been analysed by AI the (originally grey) corresponding segment is coloured black/white such that the size of the white area is proportional to white's winrate.
-
-<p>The histogram always shows a linear sequence of moves (there is just no space for a complete win-rated game tree). If you load an sgf (either by the button or by sharing an sgf from another app to BadukAI), the main line of the sgf will be shown. If you then enter moves manually or let the AI generate moves to explore a position, the histogram will show the sequence from game start to the last "manual" move. To return to your "branching position" and display the main line of the sgf again, tap "back to main".
-
-<p>Even though the histogram shows only one move sequence, the button "save sgf" will save the complete game tree (your "manual" moves become variations).
-
-<p>When AI analyses a position, the best moves (up to five) appear below the winrate histogram in order of quality. While you hold your finger on such a move, the primary variation following that move is displayed on the board. If you hold your finger on the first button (named "own") of the row, the ownership prediction by AI is shown by a transparent overlay on the board.
-
-<h3 id="control">Control buttons</h3>	
-<p>By tapping "ponder" you can make AI analyse the current position: The winrate in the histogram and the display of the best moves on the board and below the histogram will be continously updated until you stop analysis by tapping "ponder" again. 
-
-<p>If you tap "analyse all", AI will analyse each position from the current one to the end of the sequence in the histogram (spending "seconds/move" or "visits/move in analysis" from the settings on each position). Afterwards the histogram will show all winrates so that you can detect sudden changes in the winrate (which hint at mistakes) and have a closer look at these positions.
-
-<p> If you have loaded an sgf with only set stones (i.e no moves), the navigation buttons in the second row are useless, so they mutate into editing buttons: After tapping "add B stone" you can put any number of black stones on the board (in the same way as you would play them). Same goes for white stones. After tapping "remove stone" you can place a cross on the board (in the same way as a stone). By placing it on an existing stone, you can remove that stone.
-
-<p> By tapping the marked editing button again (whichever it is), you can stop its editing function. In that state, touching the board will play a stone as usual.
-	
-<p> To play handicap, just put the handicap stones on the board (as described above), tap on the white bullet in the top left corner to make it white's turn, then tap "play W" to let AI play white.
-
-<p> After tapping "load sgf", you can not only load sgf files, but also images of a go board or a part of it. BadukAI will then detect the board and stones in the image and display the resulting board position. For that to work, you must tell BadukAI what to look for, more precisely:
   <ul>
-	  <li>How many horizontal lines does the board fragment in the image contain ?</li>
-	  <li>How many vertical lines does the board fragment in the image contain ?</li>
-		<li>Is it a corner or a side ? More generally, which edges are contained in the image ?
-	</ul>
-For this tsumego, for example:
-<span style='text-align:center;display:block;'>	
-	<img width="300" src='corner.png'>
-</span>
-<p>you would have to set the following contents information:
-	<ul>
-		<li> 7 horizontal lines
-		<li> 9 vertical lines
-		<li> left and bottom edge
-	</ul>
-	And for a full board it's of course: 19 vertical lines, 19 horizontal lines, all edges.
+    <li><a href="#top_row">Top row</a></li>
+    <li><a href="#settings">Settings</a></li>
+    <li><a href="#board">Board</a></li>
+    <li><a href="#control">Control buttons</a></li>
+    <li>
+      <a href="#strength">How to adjust AI's strength for playing against it</a>
+    </li>
+  </ul>
 
-<p>You can do it in both orders:
-	<ul>
-		<li>First load the image (or take the photo): Then the dialog will re-appear afterwards with the image displayed on the right. Then edit the contents information, then tap "Detect stones in image above".
-	</ul>
-or
-	<ul>
-		<li>First edit the contents information, then check "Detect stones in new image right after ...", then load the image (or take the photo). Then BadukAI will analyze the image immediately without showing the dialog again.
-	</ul>
-The second way is faster, but only possible if you know the image contents in advance before seeing the image in the app (for example, if you will take a photo of a board in front of you).
+  <h3 id="top_row">Top row</h3>
+  <p>
+    The two bullets in the top-left corner indicate whose turn it is. You can
+    switch this by tapping on the bullets (if no moves have been played yet).
+  </p>
 
-<h3 id="strength">How to adjust AI's strength for playing against it</h3>
+  <p>
+    By tapping the dashed rectangle in the top row you can restrict AI analysis
+    to a region (which consists of a rectangle plus additional points): First a
+    dialog pops up where you can enter the coordinates of the additional points
+    and choose how many subsequent moves must be inside the region. Afterwards
+    you can define the rectangle on the board by dragging from its top left
+    corner to the bottom right one. You can cancel this analysis restriction by
+    tapping the red cross in the top row.
+  </p>
 
-<p>For KataGo you can
- <ul>
-	<li>set the strength approximately to a human rank by using <a href="#kyu-rank">kyu-rank</a> in settings</li>
-	<li>experiment on your own by</li>
-	  <ul>
-	    <li>loading a weaker network from your storage by tapping on the second field in settings</li>
-	    <li>reduce the amount of analysis by reducing "seconds/move" in settings</li>
-	    <li>reduce the amount of analysis even further by setting "maxPlayouts" to a small number via "Edit config" in settings</li>
-		</ul>
- </ul>
-</p>
+  <h3 id="settings">Settings</h3>
+  <p>
+    The settings menu in the top right corner allows you to switch networks,
+    engines and adjust game settings:
+  </p>
 
-<p>For LeelaZero you can
- <ul>
-	<li>reduce the amount of analysis by reducing "seconds/move" in settings</li>
-	<li>reduce the amount of analysis even further by setting "maxPlayouts" to a small number via "Edit config" in settings</li>
- </ul>
-</p>
+  <p>
+    The name of the network currently used is displayed in the first field
+    (LeelaZero) resp. second field (KataGo). If you tap on this field, a dialog
+    opens which allows you to manage the networks: You can delete internal
+    networks which you don't intend to use (to save storage) or you can load
+    network files from your device storage. For KataGo you can load either
+    standard or optimized networks in this way, for LeelaZero only optimized
+    networks. If you want to load an optimized network (which always consists of
+    two files), you must choose both files, one after the other (necessary
+    because otherwise the latest android versions won't grant access to both
+    files for BadukAI). You can find optimized networks
+    <a href="https://github.com/aki65/aki65.github.io/releases">here</a>.
+  </p>
 
-<hr>
+  <p id="kyu-rank">
+    If KataGo is active, you can edit the field "kyu-rank" in settings: If you
+    enter a number between 30 and -8 (denoting 9-dan), a calibrated bot of
+    roughly this strength (as in KaTrain) will make the AI moves (full credit to
+    sanderland's great KaTrain project for the underlying algorithms). For the
+    strength calibration to fit, you have to use the 20b network (or an external
+    15b network). Rank settings above 4-dan have to be taken with a grain of
+    salt: Strength will increase but not by much, so that -8 will be a lot
+    weaker than 9-dan. You might want to combine this bot with activating
+    "opening book" to get a human-style fuseki.
+  </p>
 
-<p> If you encounter any problems, let me know ...
-<p><a href="mailto:a.kirmse@gmx.de">Andreas Kirmse</a>
+  <p>
+    If you enter anything else than numbers between 30 and -8 in "kyu-rank" (or
+    nothing at all), full KataGo will be in charge of the AI moves again.
+    Analysis (via "ponder" or "analyse all") will always be done by full KataGo.
+  </p>
+
+  <p>
+    With the checkbox "winrate on play" you can toggle whether winrates are also
+    shown during play (not only in analysis). If ticked, the winrate will be
+    displayed for all moves of the full AI (the calibrated bot mentioned above
+    does not calculate winrates for his moves, so nothing is shown when he
+    plays).
+  </p>
+
+  <p>
+    In the field labelled "histogram:" you can configure what the histogram
+    below the board will show:
+  </p>
+  <ul>
+    <li>winrate</li>
+    <li>
+      difference between white's winrates in this position and the previous
+      position, capped at the value (in percent) that you enter in the text
+      field following ±, i.e. if you enter 10 the histogram will range from -10%
+      (bottom) to +10% (top)
+    </li>
+    <li>
+      difference between white's score leads in this position and the previous
+      position, capped at the value that you enter in the text field following ±
+    </li>
+  </ul>
+
+  <p>
+    The combobox "one color" allows you to switch to a fun variation of the game
+    called "One color go": All stones played appear in the same color (the one
+    that you choose in the combobox). This a fun way to train your (shape)
+    memory. The setting applies only to newly played stones, not to existing
+    ones. So, if you play a one-colored game and want to see the current
+    position with both colors, you have to set the "one color" option to "-",
+    then jump to the beginning of the game (by tapping on the first segment of
+    the histogram), then jump back to the end (by tapping on the last segment of
+    the histogram). In this way you force BadukAI to re-play all the stones, so
+    that the new setting applies, so that the stones will have normal colors
+    again.
+  </p>
+
+  <p>
+    By tapping "Manage time settings" you can set constraints on thinking time
+    for yourself and AI: "seconds/move" will be used by AI during play. If you
+    enter a positive number in the field "visits/move in analysis", then this
+    number of visits will be executed on each move during analysis. Otherwise
+    the time specified in "seconds/move" will be spent.
+  </p>
+
+  <h3 id="board">Board</h3>
+  <p>
+    If you touch the board, a preview of the stone to by played will be shown.
+    You can adjust its position by dragging your finger across the board (stone
+    position is always 3 lines above your finger). Lifting off your finger
+    finally places the stone. The 3-line-offset can be switched off in the
+    settings.
+  </p>
+
+  <p>
+    The area below the board shows a kind of winrate histogram. The area is
+    divided into as many segments as moves have been loaded (from sgf) and/or
+    played. By tapping on a segment you can navigate to the corresponding move,
+    resp. position. The current position is indicated by a red triangle. If a
+    position has been analysed by AI the (originally grey) corresponding segment
+    is coloured black/white such that the size of the white area is proportional
+    to white's winrate.
+  </p>
+
+  <p>
+    The histogram always shows a linear sequence of moves (there is just no
+    space for a complete win-rated game tree). If you load an sgf (either by the
+    button or by sharing an sgf from another app to BadukAI), the main line of
+    the sgf will be shown. If you then enter moves manually or let the AI
+    generate moves to explore a position, the histogram will show the sequence
+    from game start to the last "manual" move. To return to your "branching
+    position" and display the main line of the sgf again, tap "back to main".
+  </p>
+
+  <p>
+    Even though the histogram shows only one move sequence, the button "save
+    sgf" will save the complete game tree (your "manual" moves become
+    variations).
+  </p>
+
+  <p>
+    When AI analyses a position, the best moves (up to five) appear below the
+    winrate histogram in order of quality. While you hold your finger on such a
+    move, the primary variation following that move is displayed on the board.
+    If you hold your finger on the first button (named "own") of the row, the
+    ownership prediction by AI is shown by a transparent overlay on the board.
+  </p>
+
+  <h3 id="control">Control buttons</h3>
+  <p>
+    By tapping "ponder" you can make AI analyse the current position: The
+    winrate in the histogram and the display of the best moves on the board and
+    below the histogram will be continously updated until you stop analysis by
+    tapping "ponder" again.
+  </p>
+
+  <p>
+    If you tap "analyse all", AI will analyse each position from the current one
+    to the end of the sequence in the histogram (spending "seconds/move" or
+    "visits/move in analysis" from the settings on each position). Afterwards
+    the histogram will show all winrates so that you can detect sudden changes
+    in the winrate (which hint at mistakes) and have a closer look at these
+    positions.
+  </p>
+
+  <p>
+    If you have loaded an sgf with only set stones (i.e no moves), the
+    navigation buttons in the second row are useless, so they mutate into
+    editing buttons: After tapping "add B stone" you can put any number of black
+    stones on the board (in the same way as you would play them). Same goes for
+    white stones. After tapping "remove stone" you can place a cross on the
+    board (in the same way as a stone). By placing it on an existing stone, you
+    can remove that stone.
+  </p>
+
+  <p>
+    By tapping the marked editing button again (whichever it is), you can stop
+    its editing function. In that state, touching the board will play a stone as
+    usual.
+  </p>
+
+  <p>
+    To play handicap, just put the handicap stones on the board (as described
+    above), tap on the white bullet in the top left corner to make it white's
+    turn, then tap "play W" to let AI play white.
+  </p>
+
+  <p>
+    After tapping "load sgf", you can not only load sgf files, but also images
+    of a go board or a part of it. BadukAI will then detect the board and stones
+    in the image and display the resulting board position. For that to work, you
+    must tell BadukAI what to look for, more precisely:
+  </p>
+  <ul>
+    <li>
+      How many horizontal lines does the board fragment in the image contain ?
+    </li>
+    <li>
+      How many vertical lines does the board fragment in the image contain ?
+    </li>
+    <li>
+      Is it a corner or a side ? More generally, which edges are contained in
+      the image ?
+    </li>
+  </ul>
+
+  For this tsumego, for example:
+  <span style="text-align: center; display: block">
+    <img width="300" src="corner.png" />
+  </span>
+  <p>you would have to set the following contents information:</p>
+  <ul>
+    <li>7 horizontal lines</li>
+    <li>9 vertical lines</li>
+    <li>left and bottom edge</li>
+  </ul>
+
+  And for a full board it's of course: 19 vertical lines, 19 horizontal lines,
+  all edges.
+
+  <p>You can do it in both orders:</p>
+  <ul>
+    <li>
+      First load the image (or take the photo): Then the dialog will re-appear
+      afterwards with the image displayed on the right. Then edit the contents
+      information, then tap "Detect stones in image above".
+    </li>
+  </ul>
+
+  or
+  <ul>
+    <li>
+      First edit the contents information, then check "Detect stones in new
+      image right after ...", then load the image (or take the photo). Then
+      BadukAI will analyze the image immediately without showing the dialog
+      again.
+    </li>
+  </ul>
+
+  The second way is faster, but only possible if you know the image contents in
+  advance before seeing the image in the app (for example, if you will take a
+  photo of a board in front of you).
+
+  <h3 id="strength">How to adjust AI's strength for playing against it</h3>
+
+  <p>For KataGo you can</p>
+  <ul>
+    <li>
+      set the strength approximately to a human rank by using
+      <a href="#kyu-rank">kyu-rank</a> in settings
+    </li>
+    <li>experiment on your own by</li>
+    <ul>
+      <li>
+        loading a weaker network from your storage by tapping on the second
+        field in settings
+      </li>
+      <li>
+        reduce the amount of analysis by reducing "seconds/move" in settings
+      </li>
+      <li>
+        reduce the amount of analysis even further by setting "maxPlayouts" to a
+        small number via "Edit config" in settings
+      </li>
+    </ul>
+  </ul>
+
+  <p>For LeelaZero you can</p>
+  <ul>
+    <li>
+      reduce the amount of analysis by reducing "seconds/move" in settings
+    </li>
+    <li>
+      reduce the amount of analysis even further by setting "maxPlayouts" to a
+      small number via "Edit config" in settings
+    </li>
+  </ul>
+
+  <hr />
+
+  <p>If you encounter any problems, let me know ...</p>
+  <p><a href="mailto:a.kirmse@gmx.de">Andreas Kirmse</a></p>
+</body>
