@@ -260,6 +260,10 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\ubcd1\ub82c \ud3c9\uac00" ,
                   'ja' : "\u4e26\u884c\u8a55\u4fa1" ,
                   'zh' : "\u5e76\u884c\u8ba1\u7b97" },
+                'useNpuOnMediatekChipsets'     : {
+                  'ko' : "MediaTek \uce69\uc14b\uc5d0\uc11c NPU \uc0ac\uc6a9" ,
+                  'ja' : "MediaTek\u3067NPU\u3092\u4f7f\u7528" ,
+                  'zh' : "\u5728\u8054\u53d1\u79d1\u82af\u7247\u7ec4\u4e0a\u4f7f\u7528NPU" },                
                 'Cancel'     : {
                   'ko' : "\ucde8\uc18c" ,
                   'ja' : "\u30ad\u30e3\u30f3\u30bb\u30eb" ,
