@@ -58,7 +58,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\uad6c\uc131 \uc218\uc815" ,
                   'ja' : "\u7de8\u96c6 \u8a2d\u5b9a" , 
                   'zh' : "\u7f16\u8f91\u8bbe\u7f6e" },
-                'Boardsize'     : {
+                'boardsize'     : {
                   'ko' : "\ubcf4\ub4dc \ud06c\uae30" ,
                   'ja' : "\u30dc\u30fc\u30c9\n\u30b5\u30a4\u30ba" ,
                   'zh' : "\u68cb\u76d8\u5c3a\u5bf8" },
@@ -102,6 +102,10 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : " \ubc18\ud658 \uc5d0\n \ubcf8\uc120" ,
                   'ja' : " \u623b\u308b\n\u30e1\u30a4\u30f3" ,
                   'zh' : "\u8fd4\u56de\n\u4e3b\u7ebf" },
+                'next\n var'     : {
+                  'ko' : "\ub2e4\uc74c\n\ubcc0\ud615" ,
+                  'ja' : " \u6b21\u306e\n\u5909\u5316\u5f62" ,
+                  'zh' : " \u4e0b\u4e00\n\u4e2a\u53d8\u4f53" },                
                 'Pass'     : {
                   'ko' : "\ud1b5\uacfc" ,
                   'ja' : "\u901a\u904e" ,
@@ -260,10 +264,10 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\ubcd1\ub82c \ud3c9\uac00" ,
                   'ja' : "\u4e26\u884c\u8a55\u4fa1" ,
                   'zh' : "\u5e76\u884c\u8ba1\u7b97" },
-                'useNpuOnMediatekChipsets'     : {
-                  'ko' : "MediaTek \uce69\uc14b\uc5d0\uc11c NPU \uc0ac\uc6a9" ,
-                  'ja' : "MediaTek\u3067NPU\u3092\u4f7f\u7528" ,
-                  'zh' : "\u5728\u8054\u53d1\u79d1\u82af\u7247\u7ec4\u4e0a\u4f7f\u7528NPU" },                
+                'useSpecificNpuAccelerator'     : {
+                  'ko' : "\ud2b9\uc815 NPU \uac00\uc18d\uae30 \uc0ac\uc6a9" ,
+                  'ja' : "\u7279\u5b9a\u306eNPU\u30a2\u30af\u30bb\u30e9\u30ec\u30fc\u30bf\u3092\u4f7f\u7528" ,
+                  'zh' : "\u4f7f\u7528\u7279\u5b9a\u7684NPU\u52a0\u901f\u5668" },                
                 'Cancel'     : {
                   'ko' : "\ucde8\uc18c" ,
                   'ja' : "\u30ad\u30e3\u30f3\u30bb\u30eb" ,
@@ -487,7 +491,11 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 "Captures:" : {
                   'ko' : "\ud3ec\ucc29:",
                   'ja' : "\u6355\u7372:",
-                  'zh' : "\u63d0\u5b50:"},                
+                  'zh' : "\u63d0\u5b50:"},
+                "forcedSymmetry" : {
+                  'ko' : "\uac15\uc81c \ub300\uce6d",
+                  'ja' : "\u5f37\u5236\u7684\u306a\u5bfe\u79f0\u6027",
+                  'zh' : "\u5f3a\u5236\u5bf9\u79f0\u6027"},                
                 "SGF is being loaded.\nPlease wait ..." : {
                   'ko' : "\u0053\u0047\u0046\ub97c \ub85c\ub4dc\ud558\ub294 \uc911\uc785\ub2c8\ub2e4\u002e\n\uc7a0\uc2dc \uae30\ub2e4\ub824 \uc8fc\uc2ed\uc2dc\uc624\u002e\u002e\u002e",
                   'ja' : "\u0053\u0047\u0046\u304c\u30ed\u30fc\u30c9\u3055\u308c\u3066\u3044\u307e\u3059\u3002\n\u304a\u5f85\u3061\u304f\u3060\u3055\u3044\u002e\u002e\u002e",
