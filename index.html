@@ -34,9 +34,10 @@
   <table border="1">
     <tr align="center">
       <th>Network</th>
-			<th>Snapdragon 8 Gen 1</th>
-		  <th>Snapdragon 888</th>	
-			<th>Dimensity 9000</th>
+      <th>Snapdragon 8 Gen 1</th>
+      <th>Snapdragon 888</th>
+      <th>Dimensity 9000</th>
+      <th>Dimensity 8100</th>
       <th>Dimensity 1100</th>
       <th>Snapdragon 778</th>
       <th>Snapdragon 768</th>
@@ -44,18 +45,20 @@
     </tr>
     <tr align="center">
       <td>KG 20b</td>
-			<td>410 n/s</td>
+      <td>410 n/s</td>
       <td>330 n/s</td>
       <td>280 n/s</td>
-      <td>140 n/s</td>
+      <td>250 n/s</td>
+      <td>130 n/s</td>
       <td>120 n/s</td>
       <td>80 n/s</td>
       <td>55 n/s</td>
     </tr>
     <tr align="center">
       <td>LZ 15b</td>
-			<td></td>
+      <td></td>
       <td>1000 n/s</td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
@@ -64,8 +67,9 @@
     </tr>
     <tr align="center">
       <td>LZ 40b</td>
-			<td></td>
+      <td></td>
       <td>280 n/s</td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
@@ -153,14 +157,15 @@
     <a href="https://github.com/aki65/aki65.github.io/releases">here</a>.
   </p>
 
-	<p>
-		By tapping on "Edit config" you can open a dialog for changing the AI engine
-		configuration. Most parameters are directly passed to AI and can be found in
-		the engine's documentation. With "useSpecificNpuAccelerator" you can set the
-		NPU accelerator, that BadukAI should use. By default, BadukAI makes a
-		reasonable choice, but that will not be optimal for all devices. So, to
-		optimize performance, you can try all the available choices and check
-		which one runs fastest.
+  <p>
+    By tapping on "Edit config" you can open a dialog for changing the AI engine
+    configuration. Most parameters are directly passed to AI and can be found in
+    the engine's documentation. With "useSpecificNpuAccelerator" you can set the
+    NPU accelerator, that BadukAI should use. By default, BadukAI makes a
+    reasonable choice, but that will not be optimal for all devices. So, to
+    optimize performance, you can try all the available choices and check which
+    one runs fastest.
+  </p>
 
   <p id="kyu-rank">
     If KataGo is active, you can edit the field "kyu-rank" in settings: If you
@@ -251,12 +256,12 @@
     The histogram always shows a linear sequence of moves (there is just no
     space for a complete win-rated game tree). If you load an sgf (either by the
     button or by sharing an sgf from another app to BadukAI), the main line of
-    the sgf will be shown. If you then switch to a variation by tapping "next var"
-		at a branching position, the histogram will show the move sequence from
-		game start up to the end of the variation. Similarly, if you enter moves
-		manually or let the AI generate moves to explore a position, you create
-		a new variation and the histogram will again show the sequence
-    from game start to the end of the variation. 
+    the sgf will be shown. If you then switch to a variation by tapping "next
+    var" at a branching position, the histogram will show the move sequence from
+    game start up to the end of the variation. Similarly, if you enter moves
+    manually or let the AI generate moves to explore a position, you create a
+    new variation and the histogram will again show the sequence from game start
+    to the end of the variation.
   </p>
 
   <p>
@@ -289,14 +294,15 @@
     positions.
   </p>
 
-	<p>
-		By tapping "<", ">", "next var" and "back to main" you can navigate through the game tree.
-		"next var" doesn't change the position, but switches to the next variation. As a result
-		the circle, which indicates the next move, will change.	If you tap ">"
-		afterwards, you will advance into the chosen variation. If you are already on
-		the last variation, "next var" will switch to the first one. "back to main" will
-		always take you back to the main line (to the position where your chosen variation left
- 		off the main line).	
+  <p>
+    By tapping "<", ">", "next var" and "back to main" you can navigate through
+    the game tree. "next var" doesn't change the position, but switches to the
+    next variation. As a result the circle, which indicates the next move, will
+    change. If you tap ">" afterwards, you will advance into the chosen
+    variation. If you are already on the last variation, "next var" will switch
+    to the first one. "back to main" will always take you back to the main line
+    (to the position where your chosen variation left off the main line).
+  </p>
 
   <p>
     If you have loaded an sgf with only set stones (i.e no moves), the
