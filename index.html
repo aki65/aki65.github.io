@@ -1,6 +1,6 @@
 <title>BadukAI</title>
 <body style="background-color: #fbf3ea">
-  <h5 align="right"><a href="index_zh.html">中文版</a></h5>
+  <h5 align="right"><a href="index_zh.html">中文版 (略显陈旧)</a></h5>
   <h1 align="center">BadukAI</h1>
 
   <span style="text-align: center; display: block">
@@ -86,13 +86,13 @@
     >
     or you can
     <a
-      href="https://github.com/aki65/aki65.github.io/releases/download/v1.18.0/baduk_ai__arm64-v8a-rel-1.18.apk"
+      href="https://github.com/aki65/aki65.github.io/releases/download/v1.19.0/baduk_ai__arm64-v8a-rel-1.19.apk"
       >download 64 bit APK</a
     >
     and install it (make sure that installation of thirdparty-apps is allowed in
     settings). If this APK is not compatible with your device,
     <a
-      href="https://github.com/aki65/aki65.github.io/releases/download/v1.18.0/baduk_ai__armeabi-v7a-rel-1.18.apk"
+      href="https://github.com/aki65/aki65.github.io/releases/download/v1.19.0/baduk_ai__armeabi-v7a-rel-1.19.apk"
       >download 32 bit APK</a
     >
     and install it.
@@ -101,7 +101,7 @@
   <p>&nbsp;</p>
 
   <span style="text-align: center; display: block">
-    <img width="300" src="Screenshot_20200917-190229.jpg" />
+    <img width="300" src="Screenshot_2023-09-02-17-10-41-351_net.kir.baduk_ai.jpg" />
   </span>
 
   <p>&nbsp;</p>
@@ -128,15 +128,21 @@
     switch this by tapping on the bullets (if no moves have been played yet).
   </p>
 
+	<p>
+		By tapping the button with the green circle in the top row you can switch
+		the displaying of analyzed moves on and off.
+
   <p>
     By tapping the dashed rectangle in the top row you can restrict AI analysis
     to a region (which consists of a rectangle plus additional points): First a
-    dialog pops up where you can enter the coordinates of the additional points
+    dialog pops up, where you can switch the restriction on and off, enter the
+		coordinates of the additional points
     and choose how many subsequent moves must be inside the region. Afterwards
     you can define the rectangle on the board by dragging from its top left
-    corner to the bottom right one. You can cancel this analysis restriction by
-    tapping the red cross in the top row.
+    corner to the bottom right one. 
   </p>
+
+	
 
   <h3 id="settings">Settings</h3>
   <p>
@@ -159,11 +165,11 @@
 		The most recent networks for the different sizes are:
 		<ul>
 			<li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.16.0">
-					40 blocks (requires app version 1.16 or higher)</a></li>
+					40 blocks (requires app version 1.16 or higher and will run fast on recent Mediatek and all Snapdragon processors except Snapdragon 8 gen 2)</a></li>
 			<li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.15.0">
-				  60 blocks (requires app version 1.15 or higher)</a></li>
+				  60 blocks (requires app version 1.15 or higher and will run fast on recent Mediatek and all Snapdragon processors except Snapdragon 8 gen 2)</a></li>
       <li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.18.8">
-	        18 blocks (requires app version 1.18.8 or higher)</a></li>
+	        18 blocks (requires app version 1.18.8 or higher and will run fast on recent Snapdragon processors)</a></li>
 		</ul>
   </p>
 
@@ -219,6 +225,10 @@
     </li>
   </ul>
 
+	<p>
+		In the field labelled "moves to show in analysis" you can limit the number of
+		analyzed moves that are shown on the board.
+
   <p>
     The combobox "one color" allows you to switch to a fun variation of the game
     called "One color go": All stones played appear in the same color (the one
@@ -237,20 +247,23 @@
     By tapping "Manage time settings" you can set constraints on thinking time
     for yourself and AI: "seconds/move" will be used by AI during play. If you
     enter a positive number in the field "visits/move in analysis", then this
-    number of visits will be executed on each move during analysis. Otherwise
-    the time specified in "seconds/move" will be spent.
+    number of visits will be executed on each move during "analyse all". Otherwise
+    the time specified in "seconds/move" will be spent. If you enter a positive number in
+		"max pondering time per position (in secs)", then the AI will stop analyzing a
+		position after that amount of time, when you have tapped "ponder". Otherwise it
+		will analyze until you hit "ponder" again.
   </p>
 
   <h3 id="board">Board</h3>
   <p>
-    If you touch the board, a preview of the stone to by played will be shown.
+    If you touch the board, a preview of the stone to be played will be shown.
     You can adjust its position by dragging your finger across the board (stone
     position is always 3 lines above your finger). Lifting off your finger
     finally places the stone. The 3-line-offset can be switched off in the
     settings.
   </p>
   <p>
-		You can pan and zoom the board with two fingers.
+		You can pan, zoom and rotate the board (by multiples of 90°) with two fingers.
 	</p>
   <p>
     The area below the board shows a kind of winrate histogram. The area is
@@ -280,7 +293,7 @@
   </p>
 
   <p>
-    When AI analyses a position, the best moves (up to five) appear below the
+    When AI analyses a position, the best moves (up to ten) appear below the
     winrate histogram in order of quality. While you hold your finger on such a
     move, the primary variation following that move is displayed on the board.
     If you hold your finger on the first button (named "own") of the row, the
@@ -292,7 +305,9 @@
     By tapping "ponder" you can make AI analyse the current position: The
     winrate in the histogram and the display of the best moves on the board and
     below the histogram will be continously updated until you stop analysis by
-    tapping "ponder" again.
+    tapping "ponder" again. If you enter a positive number in "max pondering time per position (in secs)"
+		in settings, then the analysis will be paused after that amount of time
+		has been spent on a position (until the position changes).
   </p>
 
   <p>
@@ -392,6 +407,13 @@
   advance before seeing the image in the app (for example, if you will take a
   photo of a board in front of you).
 
+	<p>
+	After you have loaded a position by detecting stones in an image, you can compare
+	the detected stones to the image by tapping "show img". The stones will be displayed
+	in red over the image. So, if there have been any detection errors, they can be easily
+	corrected by "add W stone", "add B stone" or "remove stone".
+	</p>
+
   <h3 id="strength">How to adjust AI's strength for playing against it</h3>
 
   <p>For KataGo you can</p>
@@ -429,6 +451,6 @@
 
   <hr />
 
-  <p>If you encounter any problems, let me know ...</p>
+  <p>If you encounter any problems, please let me know ...</p>
   <p><a href="mailto:a.kirmse@gmx.de">Andreas Kirmse</a></p>
 </body>
