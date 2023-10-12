@@ -1,6 +1,7 @@
+<!--For anyone who modify index.html or index_zh.html, please don't forget to keep the line number relation unchanged. They are aligned line by line.-->
 <title>BadukAI</title>
 <body style="background-color: #fbf3ea">
-  <h5 align="right"><a href="index_zh.html">中文版 (略显陈旧)</a></h5>
+  <h5 align="right"><a href="index_zh.html">中文版</a></h5>
   <h1 align="center">BadukAI</h1>
 
   <span style="text-align: center; display: block">
@@ -9,33 +10,30 @@
 
   <p>&nbsp;</p>
 
-  <p>
-    This app allows you to play and analyse go/baduk/weiqi with two very strong
-    AIs:
-  </p>
+  <p>This app allows you to play and analyse go/baduk/weiqi with two very strong AIs:</p>
 
-  <p>
-    1) <b>Katago</b>: To my knowledge the first native implementation on
-    android. You can choose between a 10 blocks network (the latest one from
-    extended training) and a 20 blocks network (from version 1.5.0). Moreover
-    you can load a network from your device storage. The 10 blocks network runs
-    on CPU. The 20 blocks network is optimized for android and will use HW
-    acceleration if possible.
-  </p>
+  <p>1) <b>Katago</b>: 
+    To my knowledge the first native implementation on android. 
+    You can choose between a 10 blocks network (the latest one from extended training) 
+    and a 20 blocks network (from version 1.5.0). 
+    Moreover you can load a network from your device storage. 
+    The 10 blocks network runs on CPU. 
+    The 20 blocks network is optimized for android and will use HW acceleration if possible.</p>
 
-  <p>
-    2) <b>LeelaZero</b>: You can choose between a 15 blocks network (trained
-    against 40b self-play) and a 40 blocks network (LZ 287). Moreover you can
-    load a network from your device storage. The implementation is optimized for
-    android and will use HW acceleration if possible.
-  </p>
+  <p>2) <b>LeelaZero</b>: 
+    You can choose between a 15 blocks network (trained against 40b self-play) 
+    and a 40 blocks network (LZ 287). 
+    Moreover you can load a network from your device storage. 
+    The implementation is optimized for android and will use HW acceleration if possible.</p>
 
-  <p>Some examples of performance:</p>
+  <p>Some examples of performance (nodes per second):</p>
   <p></p>
   <table border="1">
     <tr align="center">
       <th>Network</th>
+      <th>Dimensity 9200+</th>
       <th>Snapdragon 8+ Gen 1</th>
+      <th>Kirin 9000</th>
       <th>Snapdragon 888</th>
       <th>Dimensity 9000</th>
       <th>Dimensity 8100</th>
@@ -46,57 +44,52 @@
     </tr>
     <tr align="center">
       <td>KG 20b</td>
-      <td>580 n/s</td>
-      <td>330 n/s</td>
-      <td>280 n/s</td>
-      <td>240 n/s</td>
-      <td>130 n/s</td>
-      <td>120 n/s</td>
-      <td>80 n/s</td>
-      <td>55 n/s</td>
+      <td>720 </td>
+      <td>580 </td>
+      <td>500 </td>
+      <td>330 </td>
+      <td>280 </td>
+      <td>240 </td>
+      <td>130 </td>
+      <td>120 </td>
+      <td>80 </td>
+      <td>55 </td>
     </tr>
     <tr align="center">
       <td>LZ 15b</td>
       <td></td>
-      <td>1000 n/s</td>
+      <td></td>
+      <td></td>
+      <td>1000 </td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>200 n/s</td>
+      <td>200 </td>
     </tr>
     <tr align="center">
       <td>LZ 40b</td>
-      <td>420 n/s</td>
-      <td>280 n/s</td>
+      <td></td>
+      <td>420 </td>
+      <td></td>
+      <td>280 </td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>50 n/s</td>
+      <td>50 </td>
     </tr>
   </table>
 
-  <p>
-    You can either install it from
-    <a href="https://play.google.com/store/apps/details?id=net.kir.baduk_ai"
-      >google play store</a
-    >
-    or you can
-    <a
-      href="https://github.com/aki65/aki65.github.io/releases/download/v1.19.0/baduk_ai__arm64-v8a-rel-1.19.apk"
-      >download 64 bit APK</a
-    >
-    and install it (make sure that installation of thirdparty-apps is allowed in
-    settings). If this APK is not compatible with your device,
-    <a
-      href="https://github.com/aki65/aki65.github.io/releases/download/v1.19.0/baduk_ai__armeabi-v7a-rel-1.19.apk"
-      >download 32 bit APK</a
-    >
-    and install it.
-  </p>
+<p>You can either install it from <a href=
+"https://play.google.com/store/apps/details?id=net.kir.baduk_ai"
+>google play store </a>or you can <a href=
+"https://github.com/aki65/aki65.github.io/releases/download/v1.19.0/baduk_ai__arm64-v8a-rel-1.19.apk"
+>download 64 bit APK </a>and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href=
+"https://github.com/aki65/aki65.github.io/releases/download/v1.19.0/baduk_ai__armeabi-v7a-rel-1.19.apk"
+>download 32 bit APK </a>and install it.</p>
 
   <p>&nbsp;</p>
 
@@ -106,93 +99,79 @@
 
   <p>&nbsp;</p>
 
-  <p>
-    The UI is an extension of Alexander Taylor's excellent app "LazyBaduk" (with
-    kind permission from him). Most of it is self-explanatory but some hints may
-    be helpful:
-  </p>
+  <p>The UI is an extension of Alexander Taylor's excellent app "LazyBaduk" (with kind permission from him). Most of it is self-explanatory but some hints may be helpful:</p>
 
   <ul>
     <li><a href="#top_row">Top row</a></li>
     <li><a href="#settings">Settings</a></li>
     <li><a href="#board">Board</a></li>
     <li><a href="#control">Control buttons</a></li>
-    <li>
-      <a href="#strength">How to adjust AI's strength for playing against it</a>
-    </li>
+    <li><a href="#strength">How to adjust AI's strength for playing against it</a></li>
   </ul>
 
   <h3 id="top_row">Top row</h3>
-  <p>
-    The two bullets in the top-left corner indicate whose turn it is. You can
-    switch this by tapping on the bullets (if no moves have been played yet).
-  </p>
+  <p>The two bullets in the top-left corner indicate whose turn it is. 
+    You can switch this by tapping on the bullets (if no moves have been played yet).</p>
 
-	<p>
-		By tapping the button with the green circle in the top row you can switch
-		the displaying of analyzed moves on and off.
+	<p>By tapping the button with the green circle in the top row 
+    you can switch the displaying of analyzed moves on and off.</p>
 
-  <p>
-    By tapping the dashed rectangle in the top row you can restrict AI analysis
-    to a region (which consists of a rectangle plus additional points): First a
-    dialog pops up, where you can switch the restriction on and off, enter the
-		coordinates of the additional points
-    and choose how many subsequent moves must be inside the region. Afterwards
-    you can define the rectangle on the board by dragging from its top left
-    corner to the bottom right one. 
-  </p>
-
-	
+  <p>By tapping the dashed rectangle in the top row you can restrict AI analysis to a region 
+    (which consists of a rectangle plus additional points): 
+    First a dialog pops up, where you can switch the restriction on and off, 
+    enter the coordinates of the additional points 
+    and choose how many subsequent moves must be inside the region. 
+    Afterwards you can define the rectangle on the board by dragging 
+    from its top left corner to the bottom right one.</p>
 
   <h3 id="settings">Settings</h3>
-  <p>
-    The settings menu in the top right corner allows you to switch networks,
-    engines and adjust game settings:
-  </p>
+  <p>The settings menu in the top right corner allows you to 
+    switch networks, engines and adjust game settings:</p>
 
-  <p>
-    The name of the network currently used is displayed in the first field
-    (LeelaZero) resp. second field (KataGo). If you tap on this field, a dialog
-    opens which allows you to manage the networks: You can delete internal
-    networks which you don't intend to use (to save storage) or you can load
-    network files from your device storage. For KataGo you can load either
-    standard or optimized networks in this way, for LeelaZero only optimized
-    networks. If you want to load an optimized network (which always consists of
-    two files), you must choose both files, one after the other (necessary
-    because otherwise the latest android versions won't grant access to both
-    files for BadukAI). You can find optimized networks
+  <p>The name of the network currently used is displayed in the 
+    first field (LeelaZero) resp. second field (KataGo). 
+    If you tap on this field, a dialog opens which allows you to manage the networks: 
+    You can delete internal networks which you don't intend to use (to save storage) 
+    or you can load network files from your device storage. 
+    For KataGo you can load either standard or optimized networks in this way, 
+    for LeelaZero only optimized networks. 
+    If you want to load an optimized network (which always consists of two files), 
+    you must choose both files, one after the other (necessary because otherwise 
+    the latest android versions won't grant access to both files for BadukAI). 
+    You can find optimized networks
     <a href="https://github.com/aki65/aki65.github.io/releases">here</a>.
-		The most recent networks for the different sizes are:
+		The most recent KataGo networks for the different sizes are:
 		<ul>
 			<li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.16.0">
-					40 blocks (requires app version 1.16 or higher and will run fast on recent Mediatek and all Snapdragon processors except Snapdragon 8 gen 2)</a></li>
+					40 blocks (requires app version 1.16 or higher and will run fast on recent Dimensity and all Snapdragon chips except Snapdragon 8 gen 2)</a></li>
 			<li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.15.0">
-				  60 blocks (requires app version 1.15 or higher and will run fast on recent Mediatek and all Snapdragon processors except Snapdragon 8 gen 2)</a></li>
+				  60 blocks (requires app version 1.15 or higher and will run fast on recent Dimensity and all Snapdragon chips except Snapdragon 8 gen 2)</a></li>
       <li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.18.8">
-	        18 blocks (requires app version 1.18.8 or higher and will run fast on recent Snapdragon processors)</a></li>
+	        18 blocks (requires app version 1.18.8 or higher and will run fast on recent Snapdragon chips)</a></li>
 		</ul>
   </p>
 
   <p>
-    By tapping on "Edit config" you can open a dialog for changing the AI engine
-    configuration. Most parameters are directly passed to AI and can be found in
-    the engine's documentation. With "useSpecificNpuAccelerator" you can set the
-    NPU accelerator, that BadukAI should use. By default, BadukAI makes a
-    reasonable choice, but that will not be optimal for all devices. So, to
-    optimize performance, you can try all the available choices and check which
-    one runs fastest.
+    By tapping on "Edit config" you can open a dialog for changing the AI engine configuration. 
+    Most parameters are directly passed to AI and can be found in the engine's documentation. 
+    With "useSpecificNpuAccelerator" you can set the NPU accelerator, that BadukAI should use. 
+    By default, BadukAI makes a reasonable choice, 
+    but that will not be optimal for all devices. 
+    So, to optimize performance, 
+    you can try all the available choices and check which one runs fastest.
+    Be sure there is a NPU on your phone chip.
   </p>
 
   <p id="kyu-rank">
-    If KataGo is active, you can edit the field "kyu-rank" in settings: If you
-    enter a number between 30 and -8 (denoting 9-dan), a calibrated bot of
-    roughly this strength (as in KaTrain) will make the AI moves (full credit to
-    sanderland's great KaTrain project for the underlying algorithms). For the
-    strength calibration to fit, you have to use the 20b network (or an external
-    15b network). Rank settings above 4-dan have to be taken with a grain of
-    salt: Strength will increase but not by much, so that -8 will be a lot
-    weaker than 9-dan. You might want to combine this bot with activating
-    "opening book" to get a human-style fuseki.
+    If KataGo is active, you can edit the field "kyu-rank" in settings: 
+    If you enter a number between 30 and -8 (denoting 9-dan), 
+    a calibrated bot of roughly this strength (as in KaTrain) will make the AI moves 
+    (full credit to sanderland's great KaTrain project for the underlying algorithms). 
+    For the strength calibration to fit, 
+    you have to use the 20b network (or an external 15b network). 
+    Rank settings above 4-dan have to be taken with a grain of salt: 
+    Strength will increase but not by much, so that -8 will be a lot weaker than 9-dan. 
+    You might want to combine this bot with activating "opening book" to get a human-style fuseki.
   </p>
 
   <p>
@@ -226,8 +205,8 @@
   </ul>
 
 	<p>
-		In the field labelled "moves to show in analysis" you can limit the number of
-		analyzed moves that are shown on the board.
+		In the field labelled "branches to show in analysis" you can limit the number of
+		analyzed branches that are shown on the board.
 
   <p>
     The combobox "one color" allows you to switch to a fun variation of the game
@@ -306,7 +285,7 @@
     winrate in the histogram and the display of the best moves on the board and
     below the histogram will be continously updated until you stop analysis by
     tapping "ponder" again. If you enter a positive number in "max pondering time per position (in secs)"
-		in settings, then the analysis will be paused after that amount of time
+		in manage time settings, then the analysis will be paused after that amount of time
 		has been spent on a position (until the position changes).
   </p>
 
@@ -325,7 +304,7 @@
     next variation. As a result the circle, which indicates the next move, will
     change. If you tap ">" afterwards, you will advance into the chosen
     variation. If you are already on the last variation, "next var" will switch
-    to the first one. "back to main" will always take you back to the main line
+    to the first one（the main var）. "back to main" will always take you back to the main line
     (to the position where your chosen variation left off the main line).
   </p>
 
@@ -429,7 +408,7 @@
         field in settings
       </li>
       <li>
-        reduce the amount of analysis by reducing "seconds/move" in settings
+        reduce the amount of analysis by reducing "seconds/move" in manage time settings
       </li>
       <li>
         reduce the amount of analysis even further by setting "maxPlayouts" to a
@@ -441,7 +420,7 @@
   <p>For LeelaZero you can</p>
   <ul>
     <li>
-      reduce the amount of analysis by reducing "seconds/move" in settings
+      reduce the amount of analysis by reducing "seconds/move" in manage time settings
     </li>
     <li>
       reduce the amount of analysis even further by setting "maxPlayouts" to a
