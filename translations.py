@@ -73,7 +73,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 'ponder'     : {
                   'ko' : "\uc219\uace0" ,
                   'ja' : "\u719f\u8003\u3059\u308b" ,
-                  'zh' : "\u5206\u6790" },
+                  'zh' : "\u56de\u5408\n\u5206\u6790" },
                 'load\n sgf'     : {
                   'ko' : "\uc5f4\ub2e4\nsgf" ,
                   'ja' : "\u8ca0\u8377\nsgf" ,
@@ -105,7 +105,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 'next\n var'     : {
                   'ko' : "\ub2e4\uc74c\n\ubcc0\ud615" ,
                   'ja' : " \u6b21\u306e\n\u5909\u5316\u5f62" ,
-                  'zh' : " \u4e0b\u4e00\n\u4e2a\u53d8\u4f53" },                
+                  'zh' : "\u4e0b\u4e00\n\u5206\u652f" },                
                 'Pass'     : {
                   'ko' : "\ud1b5\uacfc" ,
                   'ja' : "\u901a\u904e" ,
@@ -125,7 +125,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 'visits'     : {
                   'ko' : "\ubc29\ubb38" ,
                   'ja' : "\u8a2a\u554f" ,
-                  'zh' : "\u6a21\u62df\u6e38\u620f" },
+                  'zh' : "\u6a21\u62df\u5bf9\u5c40" },
                 'not started'     : {
                   'ko' : "\uc2e4\ud589\ub418\uc9c0 \uc54a\uc74c" ,
                   'ja' : "\u8d70\u3063\u3066\u3044\u306a\u3044" ,
@@ -184,7 +184,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 'Edit config'     : {
                   'ko' : "\uad6c\uc131 \uc218\uc815" ,
                   'ja' : "\u8a2d\u5b9a\u306e\u7de8\u96c6" ,
-                  'zh' : "\u7f16\u8f91\u8bbe\u7f6e" },
+                  'zh' : "\u7f16\u8f91\u914d\u7f6e" },
                 'Region'     : {
                   'ko' : "\uc9c0\uc5ed" ,
                   'ja' : "\u9818\u57df" ,
@@ -495,7 +495,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 "forcedSymmetry" : {
                   'ko' : "\uac15\uc81c \ub300\uce6d",
                   'ja' : "\u5f37\u5236\u7684\u306a\u5bfe\u79f0\u6027",
-                  'zh' : "\u5f3a\u5236\u5bf9\u79f0\u6027"},                
+                  'zh' : "\u5f3a\u5236\u5bf9\u79f0"},                
                 "SGF is being loaded.\nPlease wait ..." : {
                   'ko' : "\u0053\u0047\u0046\ub97c \ub85c\ub4dc\ud558\ub294 \uc911\uc785\ub2c8\ub2e4\u002e\n\uc7a0\uc2dc \uae30\ub2e4\ub824 \uc8fc\uc2ed\uc2dc\uc624\u002e\u002e\u002e",
                   'ja' : "\u0053\u0047\u0046\u304c\u30ed\u30fc\u30c9\u3055\u308c\u3066\u3044\u307e\u3059\u3002\n\u304a\u5f85\u3061\u304f\u3060\u3055\u3044\u002e\u002e\u002e",
@@ -551,7 +551,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 "Image is being analyzed.\nPlease wait ..." : {
                   'ko' : "\uc774\ubbf8\uc9c0\ub97c \ubd84\uc11d \uc911\uc785\ub2c8\ub2e4\u002e\n\uae30\ub2e4\ub9ac\uc138\uc694 ...",
                   'ja' : "\u753b\u50cf\u306f\u5206\u6790\u4e2d\u3067\u3059.\n\u304a\u5f85\u3061\u304f\u3060\u3055\u3044 ...",
-                  'zh' : "\u6b63\u5728\u5206\u6790\u56fe\u50cf.\n\u8bf7\u7a0d\u5019 ..."},                
+                  'zh' : "\u6b63\u5728\u8bc6\u522b\u56fe\u50cf.\n\u8bf7\u7a0d\u5019 ..."},                
                 "1) Put your finger on the board, \n     then a new stone will appear\n     near to your finger.\n2) Drag your finger over the\n     board to move the stone\n     to the desired location.\n3) Lift your finger off the\n     board to place the stone." : {
                   'ko' : "\u0031\u0029 \ud310\uc5d0 \uc190\uac00\ub77d\uc744 \ub300\uba74\n     \uc190\uac00\ub77d \uadfc\ucc98\uc5d0 \uc0c8\ub85c\uc6b4\n     \ub3cc\uc774 \ub098\ud0c0\ub0a9\ub2c8\ub2e4\u002e\n\u0032\u0029 \uc2a4\ud1a4\uc744 \uc6d0\ud558\ub294 \uc704\uce58\ub85c\n     \uc774\ub3d9\ud558\uae30 \uc704\ud574 \ubcf4\ub4dc \uc704\ub85c\n     \uc190\uac00\ub77d\uc744 \ub4dc\ub798\uadf8\ud569\ub2c8\ub2e4\u002e\n\u0033\u0029 \ub3cc\uc744 \ub193\uae30 \uc704\ud574 \ubcf4\ub4dc\uc5d0\uc11c\n     \uc190\uac00\ub77d\uc744 \ub5cd\ub2c8\ub2e4\u002e",
                   'ja' : "\u0031\uff09\u30dc\u30fc\u30c9\u306b\u6307\u3092\u7f6e\u304f\n     \u3068\u3001\u6307\u306e\u8fd1\u304f\u306b\u65b0\n     \u3057\u3044\u77f3\u304c\u73fe\u308c\u307e\u3059\u3002\n\u0032\uff09\u6307\u3092\u30dc\u30fc\u30c9\u4e0a\u306b\u30c9\u30e9\n     \u30c3\u30b0\u3057\u3066\u3001\u77f3\u3092\u76ee\u7684\n     \u306e\u5834\u6240\u306b\u79fb\u52d5\u3057\u307e\u3059\u3002\n\u0033\uff09\u77f3\u3092\u7f6e\u304f\u305f\u3081\u306b\u3001\u30dc\u30fc\n     \u30c9\u304b\u3089\u6307\u3092\u96e2\u3057\u307e\u3059\u3002",
