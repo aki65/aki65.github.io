@@ -24,12 +24,16 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'zh' : "\u5bf9\u5f08\u65f6\u80dc\u7387" },
                 'board:' : {
                   'ko' : "\ubcf4\ub4dc:" ,
-                  'ja' : "\u30dc\u30fc\u30c9:" ,
+                  'ja' : "\u76e4:" ,
                   'zh' : "\u68cb\u76d8:" },
                 'b/w' : {
                   'ko' : "\ud751/\ud770" ,
                   'ja' : "\u9ed1\u767d" ,
                   'zh' : "\u9ed1\u767d" },
+               '#' : {
+                  'ko' : "\uc218" ,
+                  'ja' : "\u6570" ,
+                  'zh' : "\u624b\u6570" },                
                 'b' : {
                   'ko' : "\ud751" ,
                   'ja' : "\u9ed1" ,
@@ -57,7 +61,7 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 'Edit config'     : {
                   'ko' : "\uad6c\uc131 \uc218\uc815" ,
                   'ja' : "\u7de8\u96c6 \u8a2d\u5b9a" , 
-                  'zh' : "\u7f16\u8f91\u8bbe\u7f6e" },
+                  'zh' : "\u7f16\u8f91\u914d\u7f6e" },
                 'boardsize'     : {
                   'ko' : "\ubcf4\ub4dc \ud06c\uae30" ,
                   'ja' : "\u30dc\u30fc\u30c9\n\u30b5\u30a4\u30ba" ,
@@ -66,13 +70,13 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\ubd84\uc11d\n\ubaa8\ub4e0" ,
                   'ja' : "\u5206\u6790\u3059\u308b\n \u3059\u3079\u3066" ,
                   'zh' : "\u5168\u90e8\n\u5206\u6790" },
-                '  stop\nanalysis'     : {
+                'stop to\nanalyse'     : {
                   'ko' : "\uc911\uc9c0\n\ubd84\uc11d" ,
                   'ja' : "\u3084\u3081\u308b\n \u5206\u6790" ,
                   'zh' : "\u505c\u6b62\n\u5206\u6790" },
                 'ponder'     : {
-                  'ko' : "\uc219\uace0" ,
-                  'ja' : "\u719f\u8003\u3059\u308b" ,
+                  'ko' : "\ud604 \uc0c1\ud669\n  \ubd84\uc11d" ,
+                  'ja' : "\u73fe\u72b6\n\u5206\u6790" ,
                   'zh' : "\u56de\u5408\n\u5206\u6790" },
                 'load\n sgf'     : {
                   'ko' : "\uc5f4\ub2e4\nsgf" ,
@@ -126,6 +130,10 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\ubc29\ubb38" ,
                   'ja' : "\u8a2a\u554f" ,
                   'zh' : "\u6a21\u62df\u5bf9\u5c40" },
+                'max pondering time per position (secs)' : {
+                  'ko' : "\ud604\uc7ac \uc0c1\ud669 \ubd84\uc11d\uc758 \uc2dc\uac04 \uc81c\ud55c (\ucd08)" ,
+                  'ja' : "\u73fe\u72b6\u5206\u6790\u306e\u5236\u9650\u6642\u9593 (\u79d2)" ,
+                  'zh' : "\u56de\u5408\u5206\u6790\u65f6\u9650\uff08\u79d2\uff09" },
                 'not started'     : {
                   'ko' : "\uc2e4\ud589\ub418\uc9c0 \uc54a\uc74c" ,
                   'ja' : "\u8d70\u3063\u3066\u3044\u306a\u3044" ,
@@ -540,6 +548,30 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\uc624\ub978\ucabd",
                   'ja' : "\u53f3",
                   'zh' : "\u53f3"},
+                "Help" : {
+                  'ko' : "\ub3d5\ub2e4",
+                  'ja' : "\u652f\u63f4",
+                  'zh' : "\u5e2e\u52a9"},
+                "show\n img" : {
+                  'ko' : "\uc774\ubbf8\uc9c0\n \ud45c\uc2dc",
+                  'ja' : "\u753b\u50cf\n\u8868\u793a",
+                  'zh' : "\u663e\u793a\n\u56fe\u50cf"},
+                "hide\n img" : {
+                  'ko' : "\uc774\ubbf8\uc9c0\n\uc228\uae30\uae30",
+                  'ja' : " \u753b\u50cf\n\u3092\u96a0\u3059",
+                  'zh' : "\u9690\u85cf\n\u56fe\u50cf"},                 
+                "Restrict analysis to a region\nconsisting of a rectangle (to be\ndrawn after closing this dialog)\nand (optionally) some extra\npoints (to be entered below)" : {
+                  'ko' : "\ubd84\uc11d \ubc94\uc704\ub97c \uc9c1\uc0ac\uac01\ud615 \u0028\uc774 \ub300\ud654\n\uc0c1\uc790\ub97c \ub2eb\uc740 \ud6c4 \uadf8\ub9b4\u0029 \uacfc \u0028\uc120\ud0dd\n\uc0ac\ud56d\uc73c\ub85c\u0029 \uba87 \uac00\uc9c0 \ucd94\uac00\n\ud3ec\uc778\ud2b8 \u0028\uc544\ub798\uc5d0 \uc785\ub825\u0029 \ub85c\n\uad6c\uc131\ub41c \uc601\uc5ed\uc73c\ub85c \uc81c\ud55c\ud569\ub2c8\ub2e4",
+                  'ja' : "\u77e9\u5f62\uff08\u3053\u306e\u30c0\u30a4\u30a2\u30ed\u30b0\u3092\u9589\u3058\n\u305f\u5f8c\u306b\u63cf\u304b\u308c\u307e\u3059\uff09\u3068\uff08\u30aa\u30d7\n\u30b7\u30e7\u30f3\u3067\uff09\u3044\u304f\u3064\u304b\u306e\u8ffd\u52a0\u30dd\n\u30a4\u30f3\u30c8\uff08\u4ee5\u4e0b\u3067\u5165\u529b\u3057\u307e\u3059\uff09\u304b\n\u3089\u306a\u308b\u9818\u57df\u306b\u89e3\u6790\u3092\u5236\u9650\u3057\u307e\u3059",
+                  'zh' : "\u5c06\u5206\u6790\u9650\u5236\u5728\u4e00\u4e2a\u7531\u77e9\u5f62\n\uff08\u5c06\u5728\u5173\u95ed\u6b64\u5bf9\u8bdd\u6846\n\u540e\u7ed8\u5236\uff09\u548c\uff08\u53ef\u9009\u62e9\uff09\n\u4e00\u4e9b\u989d\u5916\u70b9\uff08\u5c06\u5728\u4e0b\u9762\n\u8f93\u5165\uff09\u7ec4\u6210\u7684\u533a\u57df"},
+                "moves to show in analysis" : {
+                  'ko' : "\ubd84\uc11d\uc5d0 \ud45c\uc2dc\ud560 \ucd5c\ub300 \uc774\ub3d9 \uc218",
+                  'ja' : "\u89e3\u6790\u306b\u8868\u793a\u3059\u308b\u6700\u5927\u624b\u6570",
+                  'zh' : "\u5206\u6790\u65f6\u9009\u70b9\u663e\u793a\u6570"},
+                "Move" : {
+                  'ko' : "\u7740\u624b",
+                  'ja' : "\u7740\u624b",
+                  'zh' : "\u624b"},                    
                 "Detect stones in image above" : {
                   'ko' : "\uc704 \uc774\ubbf8\uc9c0\uc5d0\uc11c \ub3cc \uac10\uc9c0",
                   'ja' : "\u4e0a\u306e\u753b\u50cf\u3067\u77f3\u3092\u691c\u51fa\u3059\u308b",
