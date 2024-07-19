@@ -26,14 +26,6 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\ubcf4\ub4dc:" ,
                   'ja' : "\u76e4:" ,
                   'zh' : "\u68cb\u76d8:" },
-                'b/w' : {
-                  'ko' : "\ud751/\ud770" ,
-                  'ja' : "\u9ed1\u767d" ,
-                  'zh' : "\u9ed1\u767d" },
-               '#' : {
-                  'ko' : "\uc218" ,
-                  'ja' : "\u6570" ,
-                  'zh' : "\u624b\u6570" },                
                 'b' : {
                   'ko' : "\ud751" ,
                   'ja' : "\u9ed1" ,
@@ -41,11 +33,15 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 'w' : {
                   'ko' : "\ud770" ,
                   'ja' : "\u767d" ,
+                  'zh' : "\u767d" },
+                'B' : {
+                  'ko' : "\ud751" ,
+                  'ja' : "\u9ed1" ,
+                  'zh' : "\u9ed1" },
+                'W' : {
+                  'ko' : "\ud770" ,
+                  'ja' : "\u767d" ,
                   'zh' : "\u767d" },                
-                'one color' : {
-                  'ko' : "\ub2e8\uc0c9" ,
-                  'ja' : "\u4e00\u8272" ,
-                  'zh' : "\u5355\u8272" },                
                 'show coordinates'     : {
                   'ko' : "\ub514\uc2a4\ud50c\ub808\uc774 \uc88c\ud45c" ,
                   'ja' : "\u8868\u793a \u5ea7\u6a19" ,
@@ -58,10 +54,6 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\uc2a4\uc704\uce58 \uc5d0 " ,
                   'ja' : "\u30b9\u30a4\u30c3\u30c1 \u306b " ,
                   'zh' : "\u5207\u6362\u4e3a " },
-                'Edit config'     : {
-                  'ko' : "\uad6c\uc131 \uc218\uc815" ,
-                  'ja' : "\u7de8\u96c6 \u8a2d\u5b9a" , 
-                  'zh' : "\u7f16\u8f91\u914d\u7f6e" },
                 'boardsize'     : {
                   'ko' : "\ubcf4\ub4dc \ud06c\uae30" ,
                   'ja' : "\u30dc\u30fc\u30c9\n\u30b5\u30a4\u30ba" ,
@@ -384,6 +376,10 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\uc2b9\ub960",
                   'ja' : "\u52dd\u7387",
                   'zh' : "\u80dc\u7387"    },
+                "game tree"  : {
+                  'ko' : "\ud2b8\ub9ac",
+                  'ja' : "\u8a66\u5408\u6728",
+                  'zh' : "\u6e38\u620f\u6811"    },                
                 "\u0394-score"  : {
                   'ko' : "\ub9ac\ub4dc \ucc28\uc774",
                   'ja' : "\u925b\u306e\u5dee",
@@ -559,7 +555,207 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                 "hide\n img" : {
                   'ko' : "\uc774\ubbf8\uc9c0\n\uc228\uae30\uae30",
                   'ja' : " \u753b\u50cf\n\u3092\u96a0\u3059",
-                  'zh' : "\u9690\u85cf\n\u56fe\u50cf"},                 
+                  'zh' : "\u9690\u85cf\n\u56fe\u50cf"},
+                'NPU mode' : {
+                  'ko' : "NPU \uc791\ub3d9 \ubaa8\ub4dc",
+                  'ja' : "NPU \u52d5\u4f5c\u30e2\u30fc\u30c9",
+                  'zh' : "NPU \u8fd0\u884c\u6a21\u5f0f" },                
+                'Balanced' : {
+                  'ko' : "\uade0\ud615",
+                  'ja' : "\u5747\u8861",
+                  'zh' : "\u5e73\u8861" },
+                'HighPerf' : {
+                  'ko' : "\uace0\uc131\ub2a5",
+                  'ja' : "\u9ad8\u6027\u80fd",
+                  'zh' : "\u9ad8\u6027\u80fd" },          
+                'PowerSave' : {
+                  'ko' : "\uc804\ub825 \uc808\uc57d",
+                  'ja' : "\u7701\u96fb\u529b",
+                  'zh' : "\u7701\u7535" },         
+                'SystemSettings' : {
+                  'ko' : "\uc2dc\uc2a4\ud15c \uc124\uc815",
+                  'ja' : "\u30b7\u30b9\u30c6\u30e0\u8a2d\u5b9a",
+                  'zh' : "\u7cfb\u7edf\u8bbe\u7f6e" },    
+                'SustainedHighPerf' : {
+                  'ko' : "\uc9c0\uc18d \uace0\uc131\ub2a5",
+                  'ja' : "\u6301\u7d9a\u7684\u306a\u9ad8\u6027\u80fd",
+                  'zh' : "\u6301\u7eed\u7684\u9ad8\u6027\u80fd" }, 
+                'Burst' : {
+                  'ko' : "\ubc84\uc2a4\ud2b8 \ubaa8\ub4dc",
+                  'ja' : "\u30d0\u30fc\u30b9\u30c8",
+                  'zh' : "\u7a81\u53d1\u6a21\u5f0f" },             
+                'LowPowerSave' : {
+                  'ko' : "\ub0ae\uc740 \uc804\ub825 \uc808\uc57d",
+                  'ja' : "\u30ed\u30fc\u7701\u96fb\u529b",
+                  'zh' : "\u4f4e\u7701\u7535" },      
+                'HighPowerSave' : {
+                  'ko' : "\ub192\uc740 \uc804\ub825 \uc808\uc57d",
+                  'ja' : "\u9ad8\u3044\u7701\u96fb\u529b",
+                  'zh' : "\u5f88\u9ad8\u7701\u7535" },     
+                'LowBalanced' : {
+                  'ko' : "\ub0ae\uc740 \uade0\ud615",
+                  'ja' : "\u30ed\u30fc\u5747\u8861",
+                  'zh' : "\u4f4e\u5e73\u8861" },       
+                'ExtremePowerSave' : {
+                  'ko' : "\uadf9\ub2e8 \uc804\ub825 \uc808\uc57d",
+                  'ja' : "\u6975\u7aef\u7701\u96fb\u529b",
+                  'zh' : "\u6781\u81f4\u7701\u7535" },
+                'Rules' : {
+                  'ko' : "\uaddc\uce59",
+                  'ja' : "\u898f\u5247",
+                  'zh' : "\u89c4\u5219" },                
+                'rules' : {
+                  'ko' : "\uaddc\uce59",
+                  'ja' : "\u898f\u5247",
+                  'zh' : "\u89c4\u5219" },
+                'Chinese' : {
+                  'ko' : "\uc911\uad6d\uc5b4",
+                  'ja' : "\u4e2d\u56fd\u8a9e",
+                  'zh' : "\u4e2d\u56fd\u89c4\u5219"},
+                'Japanese' : {
+                  'ko' : "\ud55c\uad6d\uc5b4",
+                  'ja' : "\u65e5\u672c\u306e",
+                  'zh' : "\u65e5\u672c\u89c4\u5219" },
+                'AGA' : {
+                  'ko' : 'AGA',
+                  'ja' : 'AGA',
+                  'zh' : 'AGA' },
+                'Tromp-Taylor' : {
+                  'ko' : 'Tromp-Taylor',
+                  'ja' : 'Tromp-Taylor',
+                  'zh' : 'Tromp-Taylor' },
+                'New-Zealand' : {
+                  'ko' : '\ub274\uc9c8\ub79c\ub4dc',
+                  'ja' : '\u30cb\u30e5\u30fc\u30b8\u30fc\u30e9\u30f3\u30c9',
+                  'zh' : '\u65b0\u897f\u5170' },
+                'Custom' : {
+                  'ko' : "\uad00\ub840",
+                  'ja' : "\u7fd2\u6163\u7684",
+                  'zh' : "\u81ea\u5b9a\u4e49" },
+                'Ko' : {
+                  'ko' : '\ud328',
+                  'ja' : '\u52ab',
+                  'zh' : '\u6253\u52ab' },
+                'Scoring' : {
+                  'ko' : '\ub4dd\uc810',
+                  'ja' : '\u63a1\u70b9',
+                  'zh' : '\u8ba1\u5206' },
+                'Tax' : {
+                  'ko' : '\uc138\uae08',
+                  'ja' : '\u7a0e\u91d1',
+                  'zh' : '\u8fd8\u68cb\u5934' },
+                'WhiteHandicapBonus' : {
+                  'ko' : '\ud654\uc774\ud2b8 \ud578\ub514\ucea1 \ubcf4\ub108\uc2a4',
+                  'ja' : '\u767d\u30cf\u30f3\u30c7\u30a3\u8cde\u4e0e',
+                  'zh' : '\u8ba9\u5b50\u8d34\u8fd8' },
+                'Suicide' : {
+                  'ko' : '\ub2e4\uc11d \uc790\uc0b4',
+                  'ja' : '\u591a\u77f3\u81ea\u6bba',
+                  'zh' : '\u591a\u9897\u68cb\u5b50\u7684\u68cb\u5757\u81ea\u6740' },
+                'HasButton' : {
+                  'ko' : '\ubc84\ud2bc \ud3ec\ud568',
+                  'ja' : '\u30dc\u30bf\u30f3\u4ed8\u304d',
+                  'zh' : '\u6570\u5b50\u89c4\u5219\u4e0b\u6536\u540e\u65b9\u8d34\u8fd8\u0030\u002e\u0035\u76ee' },
+                'FriendlyPassOk' : {
+                  'ko' : '\uc8fd\uc740 \uc790 \ucea1\ucc98 \uc804 \ud1b5\uacfc',
+                  'ja' : '\u5168\u6b7b\u8005\u3092\u6355\u3089\u3048\u308b\u524d\u306b\u30d1\u30b9',
+                  'zh' : '\u7ec8\u5c40\u65f6\u4e0d\u6e05\u9664\u76d8\u9762\u6b7b\u5b50' },
+                'SIMPLE' : {
+                  'ko' : '\ub2e8\uc21c',
+                  'ja' : '\u7c21\u5358',
+                  'zh' : '\u4e0d\u7981\u5168\u540c' },
+                'POSITIONAL' : {
+                  'ko' : '\uc704\uce58',
+                  'ja' : '\u5f79\u8077\u5225',
+                  'zh' : '\u4e25\u683c\u7981\u5168\u540c' },
+                'SITUATIONAL' : {
+                  'ko' : '\uc0c1\ud669\ubcc4',
+                  'ja' : '\u72b6\u6cc1\u7684',
+                  'zh' : '\u540c\u4e00\u65b9\u843d\u5b50\u540e\u7981\u5168\u540c' },
+                'AREA' : {
+                  'ko' : '\ub458\ub7ec\uc2f8\uc778 \uc810 \u002b \ub3cc',
+                  'ja' : '\u56f2\u307f\u30dd\u30a4\u30f3\u30c8 \u002b \u77f3',
+                  'zh' : '\u6570\u5b50\u6cd5' },
+                'TERRITORY' : {
+                  'ko' : '\ub458\ub7ec\uc2f8\uc778 \uc810 \u002b \ud3ec\ucc29',
+                  'ja' : '\u56f2\u307f\u30dd\u30a4\u30f3\u30c8 \u002b \u6355\u7372',
+                  'zh' : '\u6570\u76ee\u6cd5' },
+                'NONE' : {
+                  'ko' : '\uc5c6\uc74c',
+                  'ja' : '\u306a\u3057',
+                  'zh' : '\u4e0d\u8fd8\u68cb\u5934' },
+                'SEKI' : {
+                  'ko' : '\ube45',
+                  'ja' : '\u30bb\u30ad',
+                  'zh' : '\u4ec5\u53cc\u6d3b\u68cb\u5757\u8fd8\u68cb\u5934' },  
+                'ALL' : {
+                  'ko' : '\ubaa8\ub450',
+                  'ja' : '\u3059\u3079\u3066',
+                  'zh' : '\u6240\u6709\u68cb\u5757\u5747\u8fd8\u68cb\u5934' },
+                '0' : {
+                  'ko' : '0',
+                  'ja' : '0',
+                  'zh' : '\u4e0d\u8d34\u8fd8' },
+                'N-1' : {
+                  'ko' : '\uc2a4\ud1a4 \uac1c\uc218 - 1',
+                  'ja' : '\u77f3\u306e\u6570 - 1',
+                  'zh' : '\u8ba9\u004e\u5b50\u8fd8\u004e\u002d\u0031\u76ee' },
+                'N' : {
+                  'ko' : '\uc2a4\ud1a4 \uac1c\uc218',
+                  'ja' : '\u77f3\u306e\u6570',
+                  'zh' : '\u8ba9\u004e\u5b50\u8fd8\u004e\u76ee' },                
+                'stones numbered' : {
+                  'ko' : "\ubc88\ud638\uac00 \ub9e4\uaca8\uc9c4 \ub3cc",
+                  'ja' : "\u756a\u53f7\u77f3",
+                  'zh' : "\u663e\u793a\u68cb\u5b50\u624b\u6570" },
+                'show next move marker' : {
+                  'ko' : "\ub2e4\uc74c \u7740\u624b \ub300\ud55c \ub9c8\ucee4 \ud45c\uc2dc",
+                  'ja' : "\u6b21\u306e\u7740\u624b\u306e\u30de\u30fc\u30ab\u30fc\u3092\u8868\u793a",
+                  'zh' : "\u663e\u793a\u4e0b\u4e00\u624b\u6807\u8bb0" },
+                'all stones in same color' : {
+                  'ko' : "\ubaa8\ub4e0 \uc2a4\ud1a4\uc774 \uac19\uc740 \uc0c9\uc0c1",
+                  'ja' : "\u5168\u77f3\u540c\u8272",
+                  'zh' : "\u5355\u8272\u68cb" },
+                'theme' : {
+                  'ko' : "\ud14c\ub9c8",
+                  'ja' : "\u30c6\u30fc\u30de",
+                  'zh' : "\u4e3b\u9898" },
+                'black stone:' : {
+                  'ko' : "\uac80\uc740 \ub3cc:",
+                  'ja' : "\u9ed2\u77f3:",
+                  'zh' : "\u9ed1\u68cb:" },
+                'white stone:' : {
+                  'ko' : "\ud558\uc580 \ub3cc:",
+                  'ja' : "\u767d\u77f3:",
+                  'zh' : "\u767d\u68cb:" },
+                'Close' : {
+                  'ko' : "\ub2eb\uae30",
+                  'ja' : "\u9589\u3058\u308b",
+                  'zh' : "\u5173\u95ed" },
+                'Board appearance' : {
+                  'ko' : "\ubcf4\ub4dc\uc758 \ubaa8\uc591",
+                  'ja' : "\u30dc\u30fc\u30c9\u306e\u5916\u89b3",
+                  'zh' : "\u68cb\u76d8\u8bbe\u7f6e" },
+                'Set board appearance' : {
+                  'ko' : "\ubcf4\ub4dc\uc758 \ubaa8\uc591 \uc124\uc815",
+                  'ja' : "\u30dc\u30fc\u30c9\u306e\u5916\u89b3\u3092\u8a2d\u5b9a\u3059\u308b",
+                  'zh' : "\u8bbe\u7f6e\u4e3b\u9898\u5916\u89c2" },
+                'default' : {
+                  'ko' : "\uae30\ubcf8\uac12",
+                  'ja' : "\u65e2\u5b9a",
+                  'zh' : "\u9ed8\u8ba4" },
+                'black/white' : {
+                  'ko' : "\uac80\uc815\u002f\ud770\uc0c9",
+                  'ja' : "\u9ed2\u002f\u767d",
+                  'zh' : "\u9ed1\u002f\u767d" },
+                'custom' : {
+                  'ko' : "\uad00\ub840",
+                  'ja' : "\u7fd2\u6163\u7684",
+                  'zh' : "\u81ea\u5b9a\u4e49" },                
+                'animation speed for variations (sec/move)' : {
+                  'ko' : "\uc774\ud615 \uc0c1\ud488 \ud45c\uc2dc \u0028\ucd08\u002f\u7740\u624b\u0029",
+                  'ja' : "\u30d0\u30ea\u30a2\u30f3\u30c8\u8868\u793a \uff08\u79d2\u002f\u7740\u624b\uff09",
+                  'zh' : "\u53d8\u4f53\u7684\u52a8\u753b\u901f\u5ea6 \uff08\u79d2\u002f\u624b\uff09" },                    
                 "Restrict analysis to a region\nconsisting of a rectangle (to be\ndrawn after closing this dialog)\nand (optionally) some extra\npoints (to be entered below)" : {
                   'ko' : "\ubd84\uc11d \ubc94\uc704\ub97c \uc9c1\uc0ac\uac01\ud615 \u0028\uc774 \ub300\ud654\n\uc0c1\uc790\ub97c \ub2eb\uc740 \ud6c4 \uadf8\ub9b4\u0029 \uacfc \u0028\uc120\ud0dd\n\uc0ac\ud56d\uc73c\ub85c\u0029 \uba87 \uac00\uc9c0 \ucd94\uac00\n\ud3ec\uc778\ud2b8 \u0028\uc544\ub798\uc5d0 \uc785\ub825\u0029 \ub85c\n\uad6c\uc131\ub41c \uc601\uc5ed\uc73c\ub85c \uc81c\ud55c\ud569\ub2c8\ub2e4",
                   'ja' : "\u77e9\u5f62\uff08\u3053\u306e\u30c0\u30a4\u30a2\u30ed\u30b0\u3092\u9589\u3058\n\u305f\u5f8c\u306b\u63cf\u304b\u308c\u307e\u3059\uff09\u3068\uff08\u30aa\u30d7\n\u30b7\u30e7\u30f3\u3067\uff09\u3044\u304f\u3064\u304b\u306e\u8ffd\u52a0\u30dd\n\u30a4\u30f3\u30c8\uff08\u4ee5\u4e0b\u3067\u5165\u529b\u3057\u307e\u3059\uff09\u304b\n\u3089\u306a\u308b\u9818\u57df\u306b\u89e3\u6790\u3092\u5236\u9650\u3057\u307e\u3059",
