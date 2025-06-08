@@ -15,10 +15,11 @@
   <p>1) <b>Katago</b>: 
     To my knowledge the first native implementation on android. 
     You can choose between a 10 blocks network (the latest one from extended training) 
-    and a 20 blocks network (from version 1.5.0). 
+    and a 20 blocks network (from version 1.5.0) resp. an 18b network (the latest one from
+		katagotraining.org) if your device supports it.
     Moreover you can load a network from your device storage. 
     The 10 blocks network runs on CPU. 
-    The 20 blocks network is optimized for android and will use HW acceleration if possible.</p>
+    The 18/20 blocks network is optimized for android and will use HW acceleration if possible.</p>
 
   <p>2) <b>LeelaZero</b>: 
     You can choose between a 15 blocks network (trained against 40b self-play) 
@@ -86,9 +87,9 @@
 <p>You can either install it from <a href=
 "https://play.google.com/store/apps/details?id=net.kir.baduk_ai"
 >google play store </a>or you can <a href=
-"https://github.com/aki65/aki65.github.io/releases/download/v1.20.0/baduk_ai__arm64-v8a-rel-1.20.apk"
+"https://github.com/aki65/aki65.github.io/releases/download/v1.21.0/baduk_ai__arm64-v8a-rel-1.21.apk"
 >download 64 bit APK </a>and install it (make sure that installation of thirdparty-apps is allowed in settings). If this APK is not compatible with your device, <a href=
-"https://github.com/aki65/aki65.github.io/releases/download/v1.20.0/baduk_ai__armeabi-v7a-rel-1.20.apk"
+"https://github.com/aki65/aki65.github.io/releases/download/v1.21.0/baduk_ai__armeabi-v7a-rel-1.21.apk"
 >download 32 bit APK </a>and install it.</p>
 
   <p>&nbsp;</p>
@@ -141,15 +142,15 @@
     You can find optimized networks
     <a href="https://github.com/aki65/aki65.github.io/releases">here</a>.
 		The most recent KataGo networks for the different sizes are:
-		<ul>
+		<ul id="networks">
+      <li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.20.5">
+	        18 blocks (requires app version 1.18.8 or higher and will run fast on recent Snapdragon chipsets)</a></li>
+      <li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.20.14">
+	        28 blocks (requires app version 1.19.5 or higher and will run fast on recent Snapdragon chipsets)</a></li>
 			<li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.16.0">
-					40 blocks (requires app version 1.16 or higher and will run fast on recent Dimensity and all Snapdragon chips except Snapdragon 8 gen 2/3)</a></li>
+					40 blocks (requires app version 1.16 or higher and will run fast on recent Dimensity and older Snapdragon chipsets)</a></li>
 			<li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.15.0">
-				  60 blocks (requires app version 1.15 or higher and will run fast on recent Dimensity and all Snapdragon chips except Snapdragon 8 gen 2/3)</a></li>
-      <li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.19.13">
-	        18 blocks (requires app version 1.18.8 or higher and will run fast on recent Snapdragon chips)</a></li>
-      <li><a href="https://github.com/aki65/aki65.github.io/releases/tag/v1.19.22">
-	        28 blocks (requires app version 1.19.5 or higher and will run fast on recent Snapdragon chips)</a></li>			
+				  60 blocks (requires app version 1.15 or higher and will run fast on recent Dimensity and older Snapdragon chipsets)</a></li>
 		</ul>
   </p>
 
@@ -164,22 +165,25 @@
     Be sure there is a NPU on your phone chip.
   </p>
 
-  <p id="kyu-rank">
-    If KataGo is active, you can edit the field <b>"kyu-rank"</b> in settings: 
-    If you enter a number between 30 and -8 (denoting 9-dan), 
-    a calibrated bot of roughly this strength (as in KaTrain) will make the AI moves 
-    (full credit to sanderland's great KaTrain project for the underlying algorithms). 
-    For the strength calibration to fit, 
-    you have to use the 20b network (or an external 15b network). 
-    Rank settings above 4-dan have to be taken with a grain of salt: 
-    Strength will increase but not by much, so that -8 will be a lot weaker than 9-dan. 
-    You might want to combine this bot with activating "opening book" to get a human-style fuseki.
-  </p>
-
   <p>
-    If you enter anything else than numbers between 30 and -8 in "kyu-rank" (or
-    nothing at all), full KataGo will be in charge of the AI moves again.
-    Analysis (via "ponder" or "analyse all") will always be done by full KataGo.
+		By tapping on <b>"Configure AI opponent"</b> you can open a dialog to set up your AI opponent.
+		You can use
+		<ul>
+      <li>standard KataGo (by default very strong, but look
+		    <a href="index.html#strength">here</a> for possibilities to make it weaker)
+			</li>
+			<li>rank algorithm from KaTrain (A calibrated bot, which roughly has the chosen strength,
+				will make the AI moves. For the strength calibration to fit, you have to use the 18b or 20b network.
+				Rank settings above 4-dan have to be taken with a grain of salt: 
+        Strength will increase, but not by much, so that 9-dan will be a lot weaker than human 9-dan.
+				You might want to combine this bot with activating "opening book" to get a human-style fuseki.)
+			</li>
+		  <li id="humansl"> KataGo human SL (uses a specialized neural network, which was trained to mimic human
+				moves of the strength chosen. You can download the network
+				<a href="https://media.katagotraining.org/uploaded/networks/models_extra/b18c384nbt-humanv0.bin.gz">
+			  here</a>)
+			</li>
+		</ul>
   </p>
 
   <p>
@@ -189,13 +193,21 @@
   </p>
 
 	<p>
-		In the field labelled <b>"moves to show in analysis"</b> you can limit the number of
-		analyzed moves that are shown on the board.
+		With the checkbox <b>"memorizing mode"</b> you can switch to a mode for memorizing joseki and
+		middle game sequences. If you load an sgf in this mode, you are supposed to enter all variations
+		in the sgf on the board. If a move is wrong, the app will beep and reject it. If you can't remember
+		a move, select "game tree" (the only way to navigate in this mode) and step to one of the correct
+		following moves. If you successfully complete a variation, the app will inform you and jump back
+		to the starting position to allow you to enter the next variation. All variations done are marked
+		on the board, so you don't have to keep track yourself. When all variations are completed,
+		a message will pop up and you are done.
+	</p>
 
   <p>
 		By tapping <b>"Set board appearance"</b> you can customize the look of the board by
 		choosing your own images of board and stones. Moreover, you can toggle the
-		display of the "next move" marker and the numbering of stones. Additionally,
+		display of the "next move" marker and the numbering of stones. Furthermore, you can
+		limit	the number of	analyzed moves that are shown on the board. Additionally,
 		you can switch to a fun variation of the game called "One color go": All
     stones played appear in the same color (the one that you choose in the combobox
 		"all stones in same color"). This a fun way to train your (shape)
@@ -240,9 +252,10 @@
     the time specified in "seconds/move" will be spent. If you enter a positive number in
 		"max pondering time per position (in secs)", then the AI will stop analyzing a
 		position after that amount of time, when you have tapped "ponder". Otherwise it
-		will analyze until you hit "ponder" again. With "animation speed for variations"
+		will analyze until you hit "ponder" again. With "variations animation speed"
 		you can adjust how fast BadukAI shows a variation (when you hold your finger on
-		the analyzed move, see below)
+		the analyzed move, see below). With "autoplay animation speed" you can control the
+		speed of autoplay (triggered by long tap on "<" or ">", see below).
   </p>
 
 	<p>
@@ -326,7 +339,10 @@
     change. If you tap ">" afterwards, you will advance into the chosen
     variation. If you are already on the last variation, "next var" will switch
     to the first one（the main var）. "back to main" will always take you back to the main line
-    (to the position where your chosen variation left off the main line).
+		(to the position where your chosen variation left off the main line).
+		A long tap on "<" or ">" will start autoplay (speed can be changed via
+	  "settings" -> "Manage time settings" -> "autoplay animation speed").
+		To stop autoplay, press "<" or ">" again.
   </p>
 
   <p>
@@ -420,9 +436,10 @@
   <ul>
     <li>
       set the strength approximately to a human rank by using
-      <a href="#kyu-rank">kyu-rank</a> in settings
+      the "rank algorithm (from KaTrain)" or "KataGo human SL"
+			via "Configure AI opponent" in settings
     </li>
-    <li>experiment on your own by</li>
+    <li>experiment on your own by choosing "standard KataGo" as AI opponent and </li>
     <ul>
       <li>
         loading a weaker network from your storage by tapping on the second

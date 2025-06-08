@@ -1,7 +1,127 @@
-TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
-                  'ko' : "\uc218\ud3c9(30=30\uae09,-1=2\ub2e8,\uae30\ud0c0)" ,
-                  'ja' : "\u30ec\u30d9\u30eb(30=30\u7d1a,-1=2\u6bb5,\u7b49)" ,
-                  'zh' : "\u7b49\u7ea7(30=30\u7ea7,-1=2\u6bb5,\u7b49\u7b49)" },
+TRANSLATIONS = {'Configure AI opponent': {
+                  'ko' : "AI \uc0c1\ub300 \uad6c\uc131" ,
+                  'ja' : "AI\u5bfe\u6226\u76f8\u624b\u306e\u8a2d\u5b9a" ,
+                  'zh' : "\u914d\u7f6e AI \u5bf9\u624b" },
+                'standard KataGo': {
+                  'ko' : "\ud45c\uc900 KataGo" ,
+                  'ja' : "\u30b9\u30bf\u30f3\u30c0\u30fc\u30c9 KataGo" ,
+                  'zh' : "\u6807\u51c6 KataGo" },
+                'rank algorithm\n(from KaTrain)': {
+                  'ko' : "\ub808\ubca8 \uc54c\uace0\ub9ac\uc998\n(KaTrain \uc81c\uacf5)" ,
+                  'ja' : "\u30ec\u30d9\u30eb\u30a2\u30eb\u30b4\u30ea\u30ba\u30e0\n(KaTrain \u3088\u308a)" ,
+                  'zh' : "\u7b49\u7ea7\u7b97\u6cd5\n(\u6765\u81ea KaTrain)" },
+                'rank': {
+                  'ko' : "\ub808\ubca8" ,
+                  'ja' : "\u30ec\u30d9\u30eb" ,
+                  'zh' : "\u7b49\u7ea7" },
+                'dan': {
+                  'ko' : "\ub2e8" ,
+                  'ja' : "\u6bb5" ,
+                  'zh' : "\u6bb5" },
+                'kyu': {
+                  'ko' : "\uae09" ,
+                  'ja' : "\u7d1a" ,
+                  'zh' : "\u7ea7" },
+                'KataGo human SL': {
+                  'ko' : "KataGo \uc778\uac04 SL" ,
+                  'ja' : "KataGo \u4eba\u9593 SL" ,
+                  'zh' : "KataGo \u4eba\u7c7b SL" },
+                'opening style': {
+                  'ko' : "\uc624\ud504\ub2dd \uc2a4\ud0c0\uc77c" ,
+                  'ja' : "\u30aa\u30fc\u30d7\u30cb\u30f3\u30b0" ,
+                  'zh' : "\u5f00\u5c40\u98ce\u683c" },
+                'before AI': {
+                  'ko' : "AI \uc804" ,
+                  'ja' : "AI \u4ee5\u524d" ,
+                  'zh' : "AI \u4e4b\u524d" },
+                'after AI': {
+                  'ko' : "AI \ud6c4" ,
+                  'ja' : "AI \u306e\u5f8c" ,
+                  'zh' : "AI \u4e4b\u540e" },
+                'human SL network': {
+                  'ko' : "\ud734\uba3c SL \ub124\ud2b8\uc6cc\ud06c" ,
+                  'ja' : "\u4eba\u9593 SL \u30cd\u30c3\u30c8\u30ef\u30fc\u30af" ,
+                  'zh' : "\u4eba\u7c7b SL \u7f51\u7edc" },
+                'Choose network\n  from storage': {
+                  'ko' : "\uc2a4\ud1a0\ub9ac\uc9c0\uc5d0\uc11c\n\ub124\ud2b8\uc6cc\ud06c \uc120\ud0dd" ,
+                  'ja' : "\u30b9\u30c8\u30ec\u30fc\u30b8\u304b\u3089\u30cd\n\u30c3\u30c8\u30ef\u30fc\u30af\u3092\u9078\u3076" ,
+                  'zh' : "\u4ece\u5b58\u50a8\u5668\n\u4e2d\u9009\u62e9\u7f51\u7edc" },
+                'You can download a\nsuitable network ' : {
+                  'ko' : "\uC5EC\uAE30\uC5D0\uC11C \uC801\uD569\uD55C\n\uB124\uD2B8\uC6CC\uD06C\uB97C " ,
+                  'ja' : "\u3053\u3053\u3067\u30CD\u30C3\u30C8\n\u30EF" ,
+                  'zh' : "\u60A8\u53EF\u4EE5\u5728\u6B64\u5904\u4E0B\n\u8F7D\u5408\u9002\u7684" },
+                'here' : {
+                  'ko' : "\uB2E4\uC6B4" ,
+                  'ja' : "\u30FC\u30AF\u3092\u30C0" ,
+                  'zh' : "\u7F51\u7EDC" },
+                'You can download suitable networks ' : {
+                  'ko' : "\uC5EC\uAE30\uC5D0\uC11C \uC801\uD569\uD55C \uB124\uD2B8\uC6CC\uD06C\uB97C " ,
+                  'ja' : "\u3053\u3053\u3067\u30CD\u30C3\u30C8\u30EF" ,
+                  'zh' : "\u60A8\u53EF\u4EE5\u5728\u6B64\u5904\u4E0B\u8F7D\u5408\u9002\u7684" },
+                'stone sound'  : {
+                  'ko' : "\ub3cc\uc18c\ub9ac" ,
+                  'ja' : "\u77f3\u306e\u97f3" ,
+                  'zh' : "\u77f3\u58f0" },
+                'choose sound (.ogg)'  : {
+                  'ko' : "\uc18c\ub9ac \uc120\ud0dd (.ogg)" ,
+                  'ja' : "\u97f3\u3092\u9078\u3076 (.ogg)" ,
+                  'zh' : "\u9009\u62e9\u58f0\u97f3 (.ogg)" },
+                'language'     : {
+                  'ko' : "\uc5b8\uc5b4" ,
+                  'ja' : "\u8a00\u8a9e" ,
+                  'zh' : "\u8bed\u8a00" },
+                'automatic'     : {
+                  'ko' : "\uc790\ub3d9\uc73c\ub85c" ,
+                  'ja' : "\u81ea\u52d5\u7684\u306b" ,
+                  'zh' : "\u81ea\u52a8" },
+                'chinese'     : {
+                  'ko' : "\uc911\uad6d\uc778" ,
+                  'ja' : "\u4e2d\u56fd\u8a9e" ,
+                  'zh' : "\u4e2d\u56fd\u4eba" },
+                'english'     : {
+                  'ko' : "\uc601\uc5b4" ,
+                  'ja' : "\u82f1\u8a9e" ,
+                  'zh' : "\u82f1\u8bed" },
+                'japanese'     : {
+                  'ko' : "\uc77c\ubcf8\uc5b4" ,
+                  'ja' : "\u65e5\u672c\u8a9e" ,
+                  'zh' : "\u65e5\u672c\u4eba" },
+                'korean'     : {
+                  'ko' : "\ud55c\uad6d\uc778" ,
+                  'ja' : "\u97d3\u56fd\u4eba" ,
+                  'zh' : "\u97e9\u56fd\u4eba" },
+                'memorizing mode' : {
+                  'ko' : "\uc554\uae30 \ubaa8\ub4dc" ,
+                  'ja' : "\u6697\u8a18\u30e2\u30fc\u30c9" ,
+                  'zh' : "\u8bb0\u5fc6\u6a21\u5f0f" },
+                'Ok, next variation' : {
+                  'ko' : "\ub124\u002c \ub2e4\uc74c \ubcc0\ud615" ,
+                  'ja' : "\u3055\u3066\u3001\u6b21\u306e\u30d0\u30ea\u30a8\u30fc\u30b7\u30e7\u30f3" ,
+                  'zh' : "\u597d\u7684\uff0c\u4e0b\u4e00\u4e2a\u53d8\u4f53" },
+                'Ok, all variations done' : {
+                  'ko' : "\uc88b\uc544\u002c \ubaa8\ub4e0 \ubcc0\ud615\uc774 \uc644\ub8cc\ub418\uc5c8\uc2b5\ub2c8\ub2e4" ,
+                  'ja' : "\u306f\u3044\u3001\u3059\u3079\u3066\u306e\u30d0\u30ea\u30a8\u30fc\u30b7\u30e7\u30f3\u304c\u5b8c\u6210\u3057\u307e\u3057\u305f" ,
+                  'zh' : "\u597D\u7684\uFF0C\u6240\u6709\u53D8\u4F53\u90FD\u5DF2\u5B8C\u6210" },
+                'Really undo move ?'     : {
+                  'ko' : "\uc774\ub3d9\uc744 \ucde8\uc18c\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c ?" ,
+                  'ja' : "\u672c\u5f53\u306b\u79fb\u52d5\u3092\u5143\u306b\u623b\u3057\u307e\u3059\u304b ?" ,
+                  'zh' : "\u771f\u6b63\u64a4\u6d88\u79fb\u52a8 ?" },
+                'Yes'     : {
+                  'ko' : "\uc608" ,
+                  'ja' : "\u306f\u3044" ,
+                  'zh' : "\u662f\u7684" },
+                'No'     : {
+                  'ko' : "\uc544\ub2c8\uc694" ,
+                  'ja' : "\u3044\u3044\u3048" ,
+                  'zh' : "\u4e0d" },
+                'Undo'     : {
+                  'ko' : "\ucde8\uc18c \uc6c0\uc9c1\uc784" ,
+                  'ja' : "\u5143\u306b\u623b\u3059 \u79fb\u52d5\u3059\u308b" ,
+                  'zh' : "\u6094\u68cb" },
+                'confirm undo'     : {
+                  'ko' : "\ud655\uc778\ud558\ub2e4 \ucde8\uc18c \uc6c0\uc9c1\uc784" ,
+                  'ja' : "\u78ba\u8a8d\u3059\u308b \u5143\u306b\u623b\u3059 \u79fb\u52d5\u3059\u308b" ,
+                  'zh' : "\u786e\u8ba4\u6094\u68cb" },
                 'komi'     : {
                   'ko' : "\ub364" ,
                   'ja' : "\u30b3\u30df" ,
@@ -752,10 +872,14 @@ TRANSLATIONS = {'kyu-rank(30=30K,-1=2D,etc)' : {
                   'ko' : "\uad00\ub840",
                   'ja' : "\u7fd2\u6163\u7684",
                   'zh' : "\u81ea\u5b9a\u4e49" },                
-                'animation speed for variations (sec/move)' : {
+                'variations animation speed (sec/move)' : {
                   'ko' : "\uc774\ud615 \uc0c1\ud488 \ud45c\uc2dc \u0028\ucd08\u002f\u7740\u624b\u0029",
                   'ja' : "\u30d0\u30ea\u30a2\u30f3\u30c8\u8868\u793a \uff08\u79d2\u002f\u7740\u624b\uff09",
-                  'zh' : "\u53d8\u4f53\u7684\u52a8\u753b\u901f\u5ea6 \uff08\u79d2\u002f\u624b\uff09" },                    
+                  'zh' : "\u53d8\u4f53\u7684\u52a8\u753b\u901f\u5ea6 \uff08\u79d2\u002f\u624b\uff09" },
+                'autoplay animation speed (sec/move)' : {
+                  'ko' : "\uc790\ub3d9\uc7ac\uc0dd \uc18d\ub3c4 \u0028\ucd08\u002f\u7740\u624b\u0029",
+                  'ja' : "\u81ea\u52d5\u518d\u751f \uff08\u79d2\u002f\u7740\u624b\uff09",
+                  'zh' : "\u81ea\u52a8\u64ad\u653e\u901f\u5ea6 \uff08\u79d2\u002f\u624b\uff09" },
                 "Restrict analysis to a region\nconsisting of a rectangle (to be\ndrawn after closing this dialog)\nand (optionally) some extra\npoints (to be entered below)" : {
                   'ko' : "\ubd84\uc11d \ubc94\uc704\ub97c \uc9c1\uc0ac\uac01\ud615 \u0028\uc774 \ub300\ud654\n\uc0c1\uc790\ub97c \ub2eb\uc740 \ud6c4 \uadf8\ub9b4\u0029 \uacfc \u0028\uc120\ud0dd\n\uc0ac\ud56d\uc73c\ub85c\u0029 \uba87 \uac00\uc9c0 \ucd94\uac00\n\ud3ec\uc778\ud2b8 \u0028\uc544\ub798\uc5d0 \uc785\ub825\u0029 \ub85c\n\uad6c\uc131\ub41c \uc601\uc5ed\uc73c\ub85c \uc81c\ud55c\ud569\ub2c8\ub2e4",
                   'ja' : "\u77e9\u5f62\uff08\u3053\u306e\u30c0\u30a4\u30a2\u30ed\u30b0\u3092\u9589\u3058\n\u305f\u5f8c\u306b\u63cf\u304b\u308c\u307e\u3059\uff09\u3068\uff08\u30aa\u30d7\n\u30b7\u30e7\u30f3\u3067\uff09\u3044\u304f\u3064\u304b\u306e\u8ffd\u52a0\u30dd\n\u30a4\u30f3\u30c8\uff08\u4ee5\u4e0b\u3067\u5165\u529b\u3057\u307e\u3059\uff09\u304b\n\u3089\u306a\u308b\u9818\u57df\u306b\u89e3\u6790\u3092\u5236\u9650\u3057\u307e\u3059",
