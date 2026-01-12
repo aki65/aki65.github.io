@@ -221,7 +221,19 @@ TRANSLATIONS = {'Configure AI opponent': {
                 'next\n var'     : {
                   'ko' : "\ub2e4\uc74c\n\ubcc0\ud615" ,
                   'ja' : " \u6b21\u306e\n\u5909\u5316\u5f62" ,
-                  'zh' : "\u4e0b\u4e00\n\u5206\u652f" },                
+                  'zh' : "\u4e0b\u4e00\n\u5206\u652f" },
+                'Next'     : {
+                  'ko' : "\ub2e4\uc74c" ,
+                  'ja' : "\u6b21\u306e" ,
+                  'zh' : "\u4e0b\u4e00" },
+                'Select'     : {
+                  'ko' : "\uc120\ud0dd" ,
+                  'ja' : "\u3092\u9078\u3076" ,
+                  'zh' : "\u9009\u62e9" },
+                'Select sgf from loaded collection': {
+                  'ko' : "\uB85C\uB4DC\uB41C \uCEEC\uB809\uC158\uC5D0\uC11C \u0073\u0067\u0066\uB97C \uC120\uD0DD\uD569\uB2C8\uB2E4" ,
+                  'ja' : "\u30ED\u30FC\u30C9\u3055\u308C\u305F\u30BB\u30C3\u30C8\u304B\u3089\u0073\u0067\u0066\u3092\u9078\u629E" ,
+                  'zh' : "\u4ECE\u5DF2\u52A0\u8F7D\u7684\u96C6\u5408\u4E2D\u9009\u62E9 \u0073\u0067\u0066" },
                 'Pass'     : {
                   'ko' : "\ud1b5\uacfc" ,
                   'ja' : "\u901a\u904e" ,
@@ -504,6 +516,10 @@ TRANSLATIONS = {'Configure AI opponent': {
                   'ko' : "\ub9ac\ub4dc \ucc28\uc774",
                   'ja' : "\u925b\u306e\u5dee",
                   'zh' : "\u76ee\u5dee\u589e\u51cf"},
+                "score"  : {
+                  'ko' : "\ub9ac\ub4dc",
+                  'ja' : "\u925b",
+                  'zh' : "\u5F97\u5206"},                
                 "sound"  : {
                   'ko' : "\uc18c\ub9ac",
                   'ja' : "\u97f3",
@@ -836,10 +852,10 @@ TRANSLATIONS = {'Configure AI opponent': {
                   'ko' : "\ubaa8\ub4e0 \uc2a4\ud1a4\uc774 \uac19\uc740 \uc0c9\uc0c1",
                   'ja' : "\u5168\u77f3\u540c\u8272",
                   'zh' : "\u5355\u8272\u68cb" },
-                'theme' : {
-                  'ko' : "\ud14c\ub9c8",
-                  'ja' : "\u30c6\u30fc\u30de",
-                  'zh' : "\u4e3b\u9898" },
+                'board theme' : {
+                  'ko' : "\ubcf4\ub4dc\uc758 \ud14c\ub9c8",
+                  'ja' : "\u30DC\u30FC\u30C9\u306E\u30C6\u30FC\u30DE",
+                  'zh' : "\u68cb\u76d8\u4e3b\u9898" },
                 'black stone:' : {
                   'ko' : "\uac80\uc740 \ub3cc:",
                   'ja' : "\u9ed2\u77f3:",
@@ -856,10 +872,26 @@ TRANSLATIONS = {'Configure AI opponent': {
                   'ko' : "\ubcf4\ub4dc\uc758 \ubaa8\uc591",
                   'ja' : "\u30dc\u30fc\u30c9\u306e\u5916\u89b3",
                   'zh' : "\u68cb\u76d8\u8bbe\u7f6e" },
-                'Set board appearance' : {
-                  'ko' : "\ubcf4\ub4dc\uc758 \ubaa8\uc591 \uc124\uc815",
-                  'ja' : "\u30dc\u30fc\u30c9\u306e\u5916\u89b3\u3092\u8a2d\u5b9a\u3059\u308b",
-                  'zh' : "\u8bbe\u7f6e\u4e3b\u9898\u5916\u89c2" },
+                'Set appearance' : {
+                  'ko' : "\uC678\uD615 \uC124\uC815",
+                  'ja' : "\u5916\u89B3\u3092\u8A2D\u5B9A\u3059\u308B",
+                  'zh' : "\u8bbe\u7f6e\u4e3b\u9898" },
+                'UI style' : {
+                  'ko' : "\uC0AC\uC6A9\uC790 \uC778\uD130\uD398\uC774\uC2A4 \uC2A4\uD0C0\uC77C",
+                  'ja' : "\u30E6\u30FC\u30B6\u30A4\u30F3\u30BF\u30FC\u30D5\u30A7\u30FC\u30B9\u30B9\u30BF\u30A4\u30EB",
+                  'zh' : "\u7528\u6237\u754C\u9762\u98CE\u683C" },
+                'light' : {
+                  'ko' : "\uBC1D\uC740",
+                  'ja' : "\u660E\u308B\u3044",
+                  'zh' : "\u660E\u4EAE\u7684" },
+                'dark' : {
+                  'ko' : "\uC5B4\uB450\uC6B4",
+                  'ja' : "\u6697\u3044",
+                  'zh' : "\u9ED1\u6697\u7684" },
+                'Please restart the app for the new style to take effect': {
+                  'ko' : "\uC0C8\uB85C\uC6B4 \uC2A4\uD0C0\uC77C\uC744 \uC801\uC6A9\uD558\uB824\uBA74 \uC571\uC744 \uB2E4\uC2DC \uC2DC\uC791\uD558\uC138\uC694\u002E",
+                  'ja' : "\u65B0\u3057\u3044\u30B9\u30BF\u30A4\u30EB\u3092\u6709\u52B9\u306B\u3059\u308B\u306B\u306F\u3001\u30A2\u30D7\u30EA\u3092\u518D\u8D77\u52D5\u3057\u3066\u304F\u3060\u3055\u3044",
+                  'zh' : "\u8BF7\u91CD\u542F\u5E94\u7528\u7A0B\u5E8F\u4EE5\u4F7F\u65B0\u6837\u5F0F\u751F\u6548" },
                 'default' : {
                   'ko' : "\uae30\ubcf8\uac12",
                   'ja' : "\u65e2\u5b9a",
